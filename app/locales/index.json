@@ -1,0 +1,8 @@
+{
+    "home":{
+        "header": {
+            "title":"Bonjour | Home Title",
+            "text": "Be read and the callback function that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        }
+    }
+}

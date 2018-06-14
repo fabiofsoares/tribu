@@ -1,0 +1,8 @@
+{
+    "home":{
+        "header": {
+            "title":"Bonjour | USER Title",
+            "text": "Be read USER USER ack function that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        }
+    }
+}
