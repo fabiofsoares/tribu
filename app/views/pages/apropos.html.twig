@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    A propos
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<p>{{ data.main.text }}</p>
+   
+{% endblock %}

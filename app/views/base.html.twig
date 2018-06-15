@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            {% block page_title '' %} | {% block site_title 'TRIBU' %}
+        {% endblock %}
+    </title>
+    {% block stylesheets ''%}
+    <link rel="stylesheet" href="public/stylesheet/css/style.css">
+</head>
+<body>
+    {% block body ''%}
+    {% block javascripts ''%}
+</body>
+<script src="public/script/main.js"></script>
+</html>

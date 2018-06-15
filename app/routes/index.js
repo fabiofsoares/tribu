@@ -4,6 +4,8 @@ let express     = require('express'),
     index       = require('../controllers/indexController');
 
 //Routes
-router.get('/', index.hello )  
+router.get('/', index.accueil )
+
+router.get('/apropos', index.apropos ) 
 
 module.exports = router;
