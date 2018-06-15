@@ -4,8 +4,7 @@ const express   = require('express'),
       host      = '127.0.0.1',
       port      = 3000,
       path      = require('path'),
-      Twig      = require("twig"),
-      fs        = require('fs');
+      Twig      = require("twig");      
 
 app.set('views', path.join(__dirname, 'app/views'));
 app.use(express.static(path.join(__dirname, 'public'))); 
