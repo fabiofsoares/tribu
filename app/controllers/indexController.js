@@ -62,8 +62,11 @@ exports.connectionUser = function(req, res) {
     db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
-        db.end();        
-        console.log('RESULT : ', result)
+        db.end();
+        
+        req.session.prenom = result[0].prenom
+        req.session.nom = result[0].nom
+        res.redirect('/users')
     })
     
 };
