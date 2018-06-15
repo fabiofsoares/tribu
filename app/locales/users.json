@@ -1,8 +1,14 @@
 {
-    "home":{
+    "user":{
         "header": {
             "title":"Bonjour | USER Title",
-            "text": "Be read USER USER ack function that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+            "text": "Be read and the callback function that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        },
+        "main": {            
+            "text": "MAAAIIN USER :hen the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        },
+        "footer": {            
+            "text": "FOOTER USER :nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
         }
     }
 }

@@ -6,6 +6,12 @@ let express     = require('express'),
 //Routes
 router.get('/', index.accueil )
 
-router.get('/apropos', index.apropos ) 
+router.get('/apropos', index.apropos )
+
+router.get('/inscription', index.inscription )
+
+router.post('/inscription', index.sinscription )
+
+router.post('/connection', index.connectionUser ) 
 
 module.exports = router;

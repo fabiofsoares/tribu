@@ -22,5 +22,14 @@
         "footer": {            
             "text": "FOOTER APROPOS : nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
         }
+    },
+    "inscription":{
+        "header": {
+            "title":"Bonjour | INSCRIPTION",
+            "text": "Be read and the callbacA PROPOS called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        },
+        "footer": {            
+            "text": "FOOTER APROPOS : nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        }
     }
 }

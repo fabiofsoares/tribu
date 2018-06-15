@@ -4,6 +4,6 @@ let express     = require('express'),
     users       = require('../controllers/usersController');
 
 //Route
-router.get('/', users.hello )
+router.get('/', users.index )
 
 module.exports = router;
