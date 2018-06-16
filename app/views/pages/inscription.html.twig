@@ -35,7 +35,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-primary">S'inscrire</button>
+    <button id="submit" name="submit" class="btn btn-primary">Connection</button>
   </div>
 </div>
 
@@ -46,17 +46,17 @@
 <fieldset>
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="nom">Nom</label>  
+  <label class="col-md-4 control-label" for="name">Nom</label>  
   <div class="col-md-4">
-  <input id="nom" name="nom" type="text" placeholder="" class="form-control input-md" required="">    
+  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">    
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="prenom">Prenom</label>  
+  <label class="col-md-4 control-label" for="firstname">Prenom</label>  
   <div class="col-md-4">
-  <input id="prenom" name="prenom" type="text" placeholder="" class="form-control input-md">
+  <input id="firstname" name="firstname" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>
@@ -75,6 +75,29 @@
   <div class="col-md-4">
   <input id="password" name="password" type="text" placeholder="" class="form-control input-md">
     
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="team">Teams | Quartiers</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="team-0">
+      <input type="radio" name="team" id="team-0" value="1" checked="checked">
+      1 - Alpha
+    </label> 
+    <label class="radio-inline" for="team-1">
+      <input type="radio" name="team" id="team-1" value="2">
+      2 - Beta
+    </label> 
+    <label class="radio-inline" for="team-2">
+      <input type="radio" name="team" id="team-2" value="3">
+      3 - Gama
+    </label> 
+    <label class="radio-inline" for="team-3">
+      <input type="radio" name="team" id="team-3" value="4">
+      4 - Delta
+    </label>
   </div>
 </div>
 

@@ -10,11 +10,13 @@
 
 {% block content %}
 
-<p>{{ data.main.text }}</p>
+<p>NOM : {{ user.name }}</p>
+<p>PRENOM : {{ user.firstname }}</p>
+<p>EMAIL : {{ user.email }}</p>
+<p>TEAM : {{ team }}</p>
 
-<p>{{ user.id }}</p>
-<p>{{ user.nom }}</p>
-<p>{{ user.prenom }}</p>
-<p>{{ user.email }}</p>
+{% for participant in participants %}
+<p>TEAM USER : {{ participant.firstname }} {{ participant.name }}</p>
+{% endfor %}
    
 {% endblock %}

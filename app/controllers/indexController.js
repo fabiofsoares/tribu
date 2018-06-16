@@ -21,22 +21,27 @@ exports.apropos = function(req, res) {
 };
 
 //Page apropos
-exports.inscription = function(req, res) {
+exports.form_inscription = function(req, res) {
     res.render('pages/inscription.html.twig', {
         data : data.inscription
     });
 };
 
 //Page apropos
-exports.sinscription = function(req, res) {
-    let sql = 'INSERT INTO USERS (nom, prenom, email, password) VALUES (?, ?, ?)',
-        values = [req.body.nom, req.body.prenom, req.body.email, req.body.password];       
+exports.inscription = function(req, res) {
+    let sql = 'INSERT INTO USERS (name, firstname, email, password, fk_team) VALUES (?, ?, ?, ?, ?)',
+        values = [req.body.name, req.body.firstname, req.body.email, req.body.password, req.body.team];       
         
-    db.connect();
+    //db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
-        db.end();
-        console.log('RESULT : ', result)
+        //db.end();
+        
+        req.session.email = req.body.email
+        req.session.name = req.body.name
+        req.session.firstname = req.body.firstname
+        
+        res.redirect('/users')
     })
     
 };
@@ -48,7 +53,7 @@ exports.findUserByEmail = function(email) {
     db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
-        db.end();
+        //db.end();
         
         return result;
     })
@@ -62,10 +67,11 @@ exports.connectionUser = function(req, res) {
     db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
-        db.end();
-        
-        req.session.prenom = result[0].prenom
-        req.session.nom = result[0].nom
+        //db.end();        
+        req.session.email = result[0].email
+        req.session.name = result[0].name
+        req.session.firstname = result[0].firstname
+
         res.redirect('/users')
     })
     
