@@ -1,12 +1,17 @@
 <header>
-<nav>
-    <ul>
-        <li><a href="/">ACCUEIL</a></li>
-        <li><a href="/apropos">A propos</a></li>
-        <li><a href="/users">Users</a></li>
-        <li><a href="/inscription">Inscription</a></li>
-    </ul>
-</nav>
+    {% include 'components/_menu.html.twig' %}
+    <div class='user'>
+        {# Si l'utilisateur est deja log #}
+        {% if user %}        
+            <a href='/logout'>
+                <img src='img/icons/user_on.png' />
+            </a>
+        {% else %}
+            <a href='/login'>
+                <img src='img/icons/user.png' />
+            </a>
+        {% endif %}        
+    </div>  
     <h1>{{ data.header.title }}</h1>
     <p>{{ data.header.text }}</p>    
-</header>    
+</header>  

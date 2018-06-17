@@ -21,12 +21,23 @@ exports.apropos = function(req, res) {
 };
 
 //Page apropos
-exports.form_inscription = function(req, res) {
-    res.render('pages/inscription.html.twig', {
+exports.register = function(req, res) {
+    res.render('pages/register.html.twig', {
         data : data.inscription
     });
 };
 
+//Page apropos
+exports.login = function(req, res) {
+    res.render('pages/login.html.twig', {
+        data : data.inscription
+    });
+};
+
+exports.logout = function(req, res) {
+    req.session.destroy();
+    res.redirect('/');
+};
 //Page apropos
 exports.inscription = function(req, res) {
     let sql = 'INSERT INTO USERS (name, firstname, email, password, fk_team) VALUES (?, ?, ?, ?, ?)',
@@ -50,7 +61,7 @@ exports.findUserByEmail = function(email) {
     let sql = 'SELECT * from users where email = ?',
         values = [email];       
         
-    db.connect();
+    //db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
         //db.end();
@@ -64,7 +75,7 @@ exports.connectionUser = function(req, res) {
     let sql = 'SELECT * from users where email = ? AND password = ?',
         values = [req.body.email, req.body.password];         
         
-    db.connect();
+    //db.connect();
     db.query(sql, values, function(err, result){
         if(err) throw err;
         //db.end();        

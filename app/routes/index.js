@@ -8,7 +8,11 @@ router.get('/', index.accueil )
 
 router.get('/apropos', index.apropos )
 
-router.get('/inscription', index.form_inscription )
+router.get('/register', index.register )
+
+router.get('/login', index.login )
+
+router.get('/logout', index.logout )
 
 router.post('/inscription', index.inscription )
 

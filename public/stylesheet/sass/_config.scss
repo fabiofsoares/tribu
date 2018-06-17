@@ -1,0 +1,28 @@
+@import 'reset';
+
+//Fonts
+@font-face {
+    font-family: 'Nexa';
+    src: url(../fonts/Nexa/NexaRegular.otf) format('truetype');
+    font-weight: normal;         
+  }
+
+$font_title : 'Arial', sans-serif;
+$font_general : 'arial', sans-serif;
+//Colors
+
+// Media Queries
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

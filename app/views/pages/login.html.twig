@@ -1,0 +1,42 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Se connecter
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<form action='/connection' method='post'>
+
+    <!-- Email / Pseudo -->
+    <div class="form-group">
+        <label for="email">Email</label>  
+        <div class="input-container">
+            <input id="email" name="email" type="text" placeholder="">
+        </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password">Password</label>  
+        <div class="input-container">
+            <input id="password" name="password" type="text" placeholder="">
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+        <button id="submit" name="submit" class="btn btn-primary">Se connecter</button>
+    </div>
+
+</form>
+
+<div class="form-group">
+    <a href='/register'class="btn btn-primary">S'inscrire</a>
+</div>
+  
+{% endblock %}
