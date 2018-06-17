@@ -6,4 +6,6 @@ let express     = require('express'),
 //Route
 router.get('/', users.index )
 
+router.get('/event/:id', users.event )
+
 module.exports = router;

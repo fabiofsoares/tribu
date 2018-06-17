@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Event
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<p>EVENT : {{ event.title }}</p>
+<p>DESCRIPTION : {{ event.description }}</p>
+<p>DATE : {{ event.date }}</p>
+<p>STATUS : {{ event.status }}</p>
+   
+{% endblock %}

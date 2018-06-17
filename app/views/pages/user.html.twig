@@ -13,10 +13,18 @@
 <p>NOM : {{ user.name }}</p>
 <p>PRENOM : {{ user.firstname }}</p>
 <p>EMAIL : {{ user.email }}</p>
-<p>TEAM : {{ team }}</p>
-
+<p>GROUPE : {{ team }}</p>
+<hr>
 {% for participant in participants %}
 <p>TEAM USER : {{ participant.firstname }} {{ participant.name }}</p>
 {% endfor %}
-   
+<hr>
+{% for event in events %}
+<p>EVENT : {{ event.title }} | {{ event.status }} </br>
+{% if event.status == 'open' %}        
+    <a href={{'/users/event/'~ event.id }} >voir plus..</a>
+{% endif %} 
+
+</p></br></br>
+{% endfor %}   
 {% endblock %}

@@ -40,6 +40,8 @@ exports.logout = function(req, res) {
 };
 //Page apropos
 exports.inscription = function(req, res) {
+    //TODO : validation si l'email existe deja sur la BD
+
     let sql = 'INSERT INTO USERS (name, firstname, email, password, fk_team) VALUES (?, ?, ?, ?, ?)',
         values = [req.body.name, req.body.firstname, req.body.email, req.body.password, req.body.team];       
         
@@ -51,7 +53,7 @@ exports.inscription = function(req, res) {
         req.session.email = req.body.email
         req.session.name = req.body.name
         req.session.firstname = req.body.firstname
-        
+        5 
         res.redirect('/users')
     })
     
