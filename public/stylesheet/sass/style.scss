@@ -3,24 +3,25 @@
 h1{
     font-family: $font_title;
     font-size: 20px;
-    color: #383636;
+    color: blue;
 }
 
 #menu, #menu-content {
     display: inline;
 }
+#menu {
+    .menu-sidebar-header{
+        width: 150px;
+        margin: 0 auto;
 
+        img {
+            width: 100%;
+        }
+    }
+}
 #menu-button {
     display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 30px;
-    vertical-align: top;
-    padding: 0;
-    line-height: 47px;
-    //float: right;
-    margin-right: 32px;
+    cursor: pointer;   
 }
 
 #menu-overlay {
@@ -49,11 +50,6 @@ h1{
 }
 #menu-sidebar li {
     display: block;
-}
-#menu-sidebar-header {
-    background: url(../../img/icons/menu.png) center;
-    background-size: cover;
-    height: 128px;
 }
 #menu-sidebar-body {
     padding: 16px 8px;
@@ -98,15 +94,55 @@ h1{
 }
 
 header {
-    .user {
-        display: inline-block;
-        width: 40px;
+    .user-header {
+        display: inline-block;        
         position: absolute;
         top: 0;
+        right: 0;       
+    }
+    .user-content{
+        position: absolute;
         right: 0;
-
-        img{
-            width: 100%;
+        display: none;
+        &.active {
+            display: block;
         }
+    }
+}
+
+.home-page {
+    .wrap-header {
+        .image {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.event-container {
+    .event {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border: 1px solid #000;
+    }
+}
+footer {
+    //position: absolute;
+    bottom: 0;
+    width: 100%;   
+
+    .contact {
+        display: flex;
+        p {
+            width: 50%;
+        }
+    }
+    .social {
+        text-align: center;
     }
 }

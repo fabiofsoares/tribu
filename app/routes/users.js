@@ -8,4 +8,6 @@ router.get('/', users.index )
 
 router.get('/event/:id', users.event )
 
+router.get('/my-account', users.myAccount )
+
 module.exports = router;

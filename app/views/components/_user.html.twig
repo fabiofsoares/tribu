@@ -1,0 +1,25 @@
+<div id="user-header" class='user-header'>
+    <div id='user-btn'>
+        <img src='img/icons/user.png' />
+    </div> 
+    {% if session %}     
+    <div class='user-content'>
+        <nav>
+            <ul>
+                <li><a href="/users">My team</a></li>
+                <li><a href="/users/my-account">Mon Compte</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>        
+    </div>
+    {% else %}        
+        <div class='user-content'>
+            <nav>
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">S'inscrire</a></li>
+                </ul>
+            </nav>        
+        </div>
+    {% endif %} 
+</div>  

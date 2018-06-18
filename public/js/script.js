@@ -25,3 +25,7 @@ overlay.addEventListener('click', function(e) {
 
 	this.parentNode.classList.remove(activatedClass);
 });
+
+document.getElementById('user-btn').addEventListener('click', function(){
+	document.querySelector('.user-content').classList.toggle('active')
+})

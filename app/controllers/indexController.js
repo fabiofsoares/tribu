@@ -4,18 +4,31 @@
 const data          = require('../locales/index.json'),
       mysql         = require('mysql'),
       config_db     = require('../database/config'),
-      db            = mysql.createConnection(config_db);    
+      db            = mysql.createConnection(config_db);
+
+let   session;    
 
 //Home page | Index
 exports.accueil = function(req, res) {
-    res.render('pages/index.html.twig', {
-        data : data.home
-    });
+    
+    req.session.email ? session = true : session = false;
+    let sql = 'SELECT * FROM events WHERE events.status = "open" ORDER BY events.date DESC';
+    
+    db.query(sql, function(err, rows, fields){
+        if(err) throw err;
+        res.render('pages/index.html.twig', {
+            session : session,
+            data : data.home,
+            events : rows
+        });
+    })
 };
 
 //Page apropos
 exports.apropos = function(req, res) {
+    req.session.email ? session = true : session = false;
     res.render('pages/apropos.html.twig', {
+        session : session,
         data : data.apropos
     });
 };

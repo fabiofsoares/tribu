@@ -45,9 +45,9 @@ exports.index = function(req, res) {
             events = rows;         
         })
         db.query(sql_teams, values_teams, function(err, rows, fields){
-            if(err) throw err;
-            console.log('RESULT : ', rows[0])            
+            if(err) throw err;                      
             res.render('pages/user.html.twig', {
+                session : true,
                 data : data.user,
                 user : user,
                 team : rows[0].district,
@@ -68,8 +68,26 @@ exports.event = function(req, res) {
         db.query(sql, values, function(err, rows, fields){
             if(err) throw err;
             console.log('RESULT : ', rows[0])            
-            res.render('pages/event.html.twig', {                
+            res.render('pages/event.html.twig', {
+                session : true,                
                 event : rows[0]
+            });          
+        })
+    }else{
+        res.redirect('/')
+    }    
+};
+
+exports.myAccount = function(req, res) {    
+    if(req.session.email){
+        let sql = 'SELECT * FROM users WHERE email = ?',        
+            values = [req.session.email];
+       
+        db.query(sql, values, function(err, rows, fields){
+            if(err) throw err;                       
+            res.render('pages/my-account.html.twig', { 
+                session : true,               
+                user : rows[0]
             });          
         })
     }else{

@@ -9,11 +9,7 @@
 {% endblock %}
 
 {% block content %}
-
-<p>NOM : {{ user.name }}</p>
-<p>PRENOM : {{ user.firstname }}</p>
-<p>EMAIL : {{ user.email }}</p>
-<p>GROUPE : {{ team }}</p>
+<h1>GROUPE : {{ team }}</h1>
 <hr>
 {% for participant in participants %}
 <p>TEAM USER : {{ participant.firstname }} {{ participant.name }}</p>

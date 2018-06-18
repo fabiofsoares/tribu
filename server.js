@@ -1,3 +1,4 @@
+'use strict';
 //Server and config
 const express     = require('express'),
       app         = express(),
@@ -9,7 +10,7 @@ const express     = require('express'),
       session     = require('express-session');      
 
 app.set('views', path.join(__dirname, 'app/views'));
-app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
