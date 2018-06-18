@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "package-name": "git+https://a2103c92533f6d7e1861fb2d9676cb2a7536dca8:x-oauth-basic@github.com/fabiofsoares/tribu.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
