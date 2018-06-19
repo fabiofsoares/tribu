@@ -2,8 +2,7 @@
     "home":{
         "header": {
             "image":"img/pages/home/header-image.png",
-            "title":"A vos marques, prêt, collectez !",
-            "subtitle": "Be read and the callback function that is to be called when the file is read completely.",
+            "title":"Soyez acteur de votre quartier,</br> et aidez à le vider de ses déchets !",            
             "buttons":[
                 {
                     "type": "primary",
@@ -16,10 +15,11 @@
             "title": "A gagner en ce moment"                    
         },
         "member": {            
-            "description": "Also include a parameter with options, but we won't be covering those in this article.",
-            "title" : "membre classiqu ou éclaureur ?",
+            "description": "Fais toi aussi partie des champions de ton quartier en agissant pour l’environnement !",
+            "title" : "Membre classiqu<br><span>ou</span><br>éclaureur ?",
             "buttons":[
                 {
+                    "type": "secondary",
                     "title": "Trouve le statut qui te correspond",
                     "url" : "/register"
                 }
@@ -28,23 +28,56 @@
         "portrait":{
             "title": "Portrait d'éclaireur",
             "citation": {
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum dignissim efficitur. Vivamus quis dolor scelerisque, suscipit nulla nec, vehicula erat. In fringilla sit amet turpis sed suscipit.",
-                "auther" : "Marie P.",
+                "text" : "Être éclaireuse, c’est génial ! Cela me permet de  rencontrer mes voisins et de créer une vraie vie de quartier, le tout pour servir une cause très importante : le recyclage. Merci La Poste !",
+                "author" : "Marie P.",
                 "district": "Belleville"
             },
             "person" : {
-                "type":"facebook",
+                "type":"instagram",
                 "data": {
-                    "image" : "img/pages/home/portrait-01.jpg",
-                    "text" : "Integer nec sapien mauris. Suspendisse vel ipsum in erat varius imperdiet ut id est. Nullam rutrum luctus est, eu lacinia libero mattis ac. Curabitur malesuada magna nisi, eu auctor lacus tristique ut. Duis non tortor vel orci vulputate laoreet. Donec viverra ante tellus, vitae pellentesque lectus consequat vitae. Maecenas a est eget sapien faucibus tempus."
+                    "image" : "img/pages/home/portrait-01.png",
+                    "text" : "Premier apéro Zéro Déchet avec la Tribu Belleville ! Une belle réussite éco-responsable.",
+                    "author" : "@mariep"
                 }                
             },
             "buttons":[
                 {
+                    "type": "blue",
                     "title": "Voir tous les portraits",
                     "url" : "/voir-tous"
                 }
             ]
+        },
+        "infos": {
+            "type" : "green",
+            "title": "66%",
+            "text": "C’est le taux de valorisation des déchets aujourd’hui en France",
+            "buttons":[
+                {
+                    "type": "normal_white",
+                    "title": "En savoir plus",
+                    "url" : "/voir-tous"
+                }
+            ]
+        },
+        "astuces": {
+            "title": "L’astuce du jour",
+            "astuce":[
+                {
+                    "type": "yellow",
+                    "image" : "img/pages/home/astuce-01.png",
+                    "title": "Astuce du jour #32",
+                    "text": "Redonnez vie à vos vieux objets"
+                }
+            ],
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Plus d'astuce",
+                    "url" : "/voir-tous"
+                }
+            ]
+            
         }
     },
     "apropos":{

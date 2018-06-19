@@ -1,7 +1,11 @@
-<div class="social-block">
-    <img class='icon-social' src="{{'img/icons/social/' ~ type ~ '.png'}}" />
-    <div class='image'>
-        <img alt="" src="{{ data.image }}" />
+<div class="{{'social-block ' ~ class }}">
+    <div class="containt">
+        <div class="{{'image ' ~ type }}" style="background: url('{{ data.image}}') center center no-repeat; background-size: cover;"></div>            
+        <div class="text">
+            <div>
+                <p class="desc">{{data.text}}</p>
+                <p class="author">- {{data.author}}</p>
+            </div>
+        </di>
     </div>
-    <p>{{data.text}}</p>
 </div>

@@ -1,11 +1,10 @@
 <section class="event-container">
     <h2>{{ title }}</h2>
-    <div class="events">
+    <div id="events-home" class="events events-home">
         {% for event in events %}
-            <div class="event" style="background: url('{{ event.image}}') center center no-repeat; background-size: cover;">
-                <div class="title">
-                    {{ event.title }}
-                </div>
+            <div class='event'>
+                <div class="event-image" style="background: url('{{ event.image}}') center center no-repeat; background-size: cover;"> </div>
+                <p> {{ event.title }}</p>
             </div>
         {% endfor %}
     </div>

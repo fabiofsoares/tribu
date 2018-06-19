@@ -3,22 +3,47 @@
 //Fonts
 @font-face {
     font-family: 'Nexa';
-    src: url(../fonts/Nexa/NexaRegular.otf) format('truetype');
+    src: url('../../fonts/Nexa/NexaRegular.otf') format('truetype');
     font-weight: normal;         
-  }
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('../../fonts/Circular/circular-medium.otf') format('truetype');
+  font-weight: normal;         
+}
+@font-face {
+  font-family: 'Circular-italic';
+  src: url('../../fonts/Circular/circular-book-italic.otf') format('truetype');
+  font-weight: italic;         
+}
+@font-face {
+  font-family: 'Circular-book';
+  src: url('../../fonts/Circular/circular-book.otf') format('truetype');
+  font-weight: normal;         
+}
+@font-face {
+  font-family: 'Circular-bold';
+  src: url('../../fonts/Circular/CircularStd-Bold.ttf') format('truetype');
+  font-weight: bold;         
+}
 
-$font_title : 'Arial', sans-serif;
-$font_general : 'arial', sans-serif;
+$font_title : 'Circular', 'arial', sans-serif;
+$font_title_bold : 'Circular-bold', 'arial', sans-serif;
+$font_general : 'Nexa', 'arial', sans-serif;
+$font_citation_italic : 'Circular-italic', 'arial', sans-serif;
+$font_citation : 'Circular-book', 'arial', sans-serif;
 
 //Colors
-$blue1 : '#26BCAD';
-$blue2 : '#8FEFD9';
-$blue3 : '#B3DDFF';
-$jeune : '#F2D443';
+$blue1 : #26BCAD;
+$blue2 : #8FEFD9;
+$blue3 : #B3DDFF;
+$blue4: #6CAFDD;
 
-$dark : '';
+$yellow : #F2D443;
+
+$dark : #2b2b2b;
 $gray : '';
-$white : '';
+$white : #FFFFFF;
 
 // Media Queries
 $tablet-width: 768px;

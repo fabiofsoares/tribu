@@ -15,51 +15,59 @@
     <div class="image">
          <img alt="image" src="{{ data.header.image }}" />
     </div>
-
-    <h1>{{ data.header.title }}</h1>
-    <p>{{ data.header.subtitle }}</p>
+    <h1>{{ data.header.title }}</h1>       
     
-    <div class='button-container'>
+    <div class='button-join'>
         {% for button in data.header.buttons %}
-        <div class='button-containt'>
-            <a class={{'button ' ~ button.type}} href={{ button.url }}>{{ button.title }}</a>
-        </div>
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
         {% endfor %}
-    </div>    
+     </div> 
 </section>
 
 {% include 'components/_events.html.twig' with {title : data.event.title, events : events} %}
 
 <section class='wrap-type-member'>
-    <div class='contain'>
+    <div class='containt'>
         <p>{{ data.member.description }}</p>
         <h3>{{ data.member.title }}</h3>
         <div class='button-container'>
             {% for button in data.member.buttons %}
-            <div class='button-containt'>
-                <a class={{'button ' ~ button.type}} href={{ button.url }}>{{ button.title }}</a>
-            </div>
+                {% include 'components/_button-ui.html.twig' with {data : button} %}
             {% endfor %}
         </div>   
     </div>
 </section>
 
 <section class='wrap-portrait'>
-    <h2>{{data.portrait.citation.title}}</h2>
+    <h2>{{data.portrait.title}}</h2>
     <div class='citation'>
-        <p>{{data.portrait.citation.text}}</p>
-        <p>{{data.portrait.citation.auther ~ ' - quartier ' ~ data.portrait.citation.district}}</p>
+        <p class='desc'>{{data.portrait.citation.text}}</p>
+        <p class='auther'>{{data.portrait.citation.author ~ ' - quartier ' ~ data.portrait.citation.district}}</p>
     </div>
-    
-    {% include 'components/_social-block.html.twig' with {type : data.portrait.person.type, data : data.portrait.person.data} %}
-    
-    <div class='button-container'>
+    <div class="portrait-social">
+        {% include 'components/_social-block.html.twig' with {type : data.portrait.person.type, data : data.portrait.person.data, class : 'gray'} %}
+    </div>
+    <div class='portrait-button'>
         {% for button in data.portrait.buttons %}
-        <div class='button-containt'>
-            <a class={{'button ' ~ button.type}} href={{ button.url }}>{{ button.title }}</a>
-        </div>
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
         {% endfor %}
     </div>
+</section>
+
+<section class="section-infos">
+     {% include 'components/_infos.html.twig' with {data : data.infos} %}
+</section>
+
+<section class="section-astuces">
+    <h2>{{data.astuces.title}}</h2>
+
+    {% for astuce in data.astuces.astuce %}
+            {% include 'components/_astuce.html.twig' with {data : astuce} %}
+    {% endfor %}
+
+    {% for button in data.astuces.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+    {% endfor %}
 </section>
 </div>
 {% endblock %}

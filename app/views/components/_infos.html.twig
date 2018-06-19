@@ -1,0 +1,9 @@
+<div class="{{'info-block ' ~ data.type }}">
+    <div class="containt">
+        <h3>{{ data.title }}</h3>
+        <p>{{ data.text }}</p>
+        {% for button in data.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}
+    </div>
+</div>

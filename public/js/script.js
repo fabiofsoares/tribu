@@ -1,7 +1,7 @@
 var content = document.querySelector('#menu-content');
 var sidebarBody = document.querySelector('#menu-sidebar-body');
 var button = document.querySelector('#menu-button');
-var overlay = document.querySelector('#menu-overlay');
+var overlay = document.querySelector('#close');
 var activatedClass = 'menu-activated';
 
 sidebarBody.innerHTML = content.innerHTML;			
@@ -22,8 +22,8 @@ button.addEventListener('keydown', function(e) {
 
 overlay.addEventListener('click', function(e) {
 	e.preventDefault();
-
-	this.parentNode.classList.remove(activatedClass);
+	console.log('close btn')
+	this.parentNode.parentNode.classList.remove(activatedClass);
 });
 
 document.getElementById('user-btn').addEventListener('click', function(){

@@ -1,0 +1,179 @@
+.button-containt {
+    text-align: center;    
+    .button {
+        &.ui{
+            text-decoration: none;
+            padding: 10px 30px;
+            text-align: center;
+            border-radius: 24px;
+            display: inline-block;
+            position: relative;
+            font-family: $font_general;
+            font-size: 15px;
+
+            &::after {
+                content: '';                
+                display: block;
+                position: absolute;
+                border-radius: 24px;
+                top: 3px;
+                left: 5px;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            span {
+                position: relative;
+                z-index: 3;
+            }
+        }
+        &.primary {
+            border: 1px solid $dark;
+            color: $white;
+            &::after {
+                background-color: $yellow;
+            }
+        }
+        &.secondary {
+            border: 1px solid $dark;
+            color: $dark;
+            &::after {
+                background-color: $white;
+            }
+        }
+        &.blue {
+            border: 1px solid $blue3;
+            color: $white;
+            &::after {
+                background-color: $blue4;
+            }
+        }
+        &.normal_white{
+            border: 1px solid $white;
+            color: $white;
+            &::after {
+                background: none;
+            }
+        }
+    }
+}
+.social-block {
+    .containt {
+        display: flex;
+        justify-content: center;
+        .image {
+            width: 200px;
+            height: 150px;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;                
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                top: -30px;
+                left: -5px;
+            }
+            &.instagram {
+                &::after {
+                    content: url('../../img/social/sb-instagram.png');                    
+                }
+            }
+            &.facebook {
+                &::after {
+                    content: url('../../img/social/sb-facebook.png');                    
+                }
+            }
+        }
+        .text {            
+            width: 112px;
+            height: 150px;
+            font-size: 13px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            .desc {
+                font-family: $font_citation_italic;
+                color: $dark;
+            }
+            .author{
+                font-family: $font_citation;
+                color: $blue3;
+            }
+        }        
+    }
+    &.gray {
+        .containt {
+            .text {
+                box-shadow: 2px 3px 7px $blue3;
+            }
+        }
+    }    
+}
+.info-block {
+    .containt {
+        color: $white;
+        font-family: $font_title;
+        text-align: center;
+        padding: 30px 10%;
+        h3 {
+            font-size: 100px;
+        }
+        p{
+            font-size: 25px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+        .button-containt{
+            margin-top: 40px;
+        }
+    }
+    &.green{
+        background-color: $blue1; 
+    }
+}
+.block-astuce {
+    .astuce {
+        max-width: 280px;
+        margin: 0 auto;
+        .astuce-image {
+            width: 100%;
+            height: 215px;
+            margin: 0 auto;
+        }
+        .infos {
+            display: flex;            
+            align-items: center;
+            position: relative;
+            bottom: 40px;
+            left: 15px;
+            .icon {
+                width: 63px;
+                height: 63px;
+                img{
+                    width: 100%;
+                }
+            }                      
+            h3{
+                font-family: $font_title_bold;
+                font-size: 17px;
+            }
+            p{
+                font-family: $font_title;
+                font-size: 13px;
+                line-height: 17px;
+            }
+        }
+        
+    }
+    &.yellow {
+        .astuce {
+            .infos {
+                background-color: $yellow;
+                color: $white;
+            }
+        }
+        
+    }
+}
