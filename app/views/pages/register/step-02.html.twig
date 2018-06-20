@@ -33,6 +33,20 @@
         </form>
     </div>
   </section>
+  <section class="wrap-about">
+    <h2>{{ data.about.title }}</h2>
+    <p>{{ data.about.text }}</p>
+    <div class='steps'>
+        {% for step in data.about.steps %}
+            <div class='step'>
+               <div class='image'>
+                    <img alt='number' src="{{ step.image }}" />
+               </div>
+               <p>{{ step.title }}</p>    
+            </div>
+        {% endfor %}
+    </div>
+  </section>
   
 </div>
 {% endblock %}

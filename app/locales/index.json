@@ -236,16 +236,16 @@
                 "text":"En tant qu’éclaireur, vous êtes en charge de rassembler vos voisins pour créer une tribu, afin de nettoyer votre quartier de tous ses déchets électroniques. ",
                 "steps":[
                     {
-                        "title":"img/pages/inscription/1.png",
-                        "image":"Parrainez vos voisins pour qu’ils rejoignent l’aventure"
+                        "image":"img/pages/inscription/1.png",
+                        "title":"Parrainez vos voisins pour qu’ils rejoignent l’aventure"
                     },
                     {
-                        "title":"img/pages/inscription/2.png",
-                        "image":"Organisez des évènements pour animer le quartier et rassembler vos voisins."
+                        "image":"img/pages/inscription/2.png",
+                        "title":"Organisez des évènements pour animer le quartier et rassembler vos voisins."
                     },
                     {
-                        "title":"img/pages/inscription/3.png",
-                        "image":"Partagez un moment de vie avec votre tribu."
+                        "image":"img/pages/inscription/3.png",
+                        "title":"Partagez un moment de vie avec votre tribu."
                     }
                 ],
                 "buttons":[

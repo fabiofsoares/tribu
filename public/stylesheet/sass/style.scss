@@ -476,8 +476,33 @@ header {
                     border: 2px solid $red;
                     color: $red;
                 }
+            }            
+        }
+    }
+    .wrap-about {
+        padding: 20px 10%;
+        margin-top: 10px;
+        h2{
+            @include title_h2;
+            color: $dark;
+        }
+        p {
+            font-family: $font_general;
+            color: $dark;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        .steps{
+            margin-top: 20px;
+            .step {
+                width: 75%;
+                max-width: 350px;
+                text-align: center;
+                margin: 0 auto;
+                .image{
+                    margin-top: 20px;
+                }
             }
-            
         }
     }
 }

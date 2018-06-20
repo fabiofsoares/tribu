@@ -619,6 +619,29 @@ header {
         border: 2px solid #FF7467;
         color: #FF7467; }
 
+.inscription-page .wrap-about {
+  padding: 20px 10%;
+  margin-top: 10px; }
+  .inscription-page .wrap-about h2 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #2b2b2b; }
+  .inscription-page .wrap-about p {
+    font-family: "Nexa", "arial", sans-serif;
+    color: #2b2b2b;
+    font-size: 15px;
+    margin-top: 20px; }
+  .inscription-page .wrap-about .steps {
+    margin-top: 20px; }
+    .inscription-page .wrap-about .steps .step {
+      width: 75%;
+      max-width: 350px;
+      text-align: center;
+      margin: 0 auto; }
+      .inscription-page .wrap-about .steps .step .image {
+        margin-top: 20px; }
+
 .event-container {
   margin-top: 30px; }
   .event-container h2 {
