@@ -4,8 +4,7 @@
         &.ui{
             text-decoration: none;
             padding: 10px 30px;
-            text-align: center;
-            border-radius: 24px;
+            text-align: center;            
             display: inline-block;
             position: relative;
             font-family: $font_general;
@@ -14,47 +13,36 @@
             &::after {
                 content: '';                
                 display: block;
-                position: absolute;
-                border-radius: 24px;
-                top: 3px;
-                left: 5px;
+                position: absolute;                
+                top: -5px;
+                left: -5px;
                 width: 100%;
-                height: 100%;
-                z-index: 1;
+                height: 100%;                
             }
             span {
                 position: relative;
-                z-index: 3;
+                top: -3px;
+                left: -5px;
             }
         }
-        &.primary {
-            border: 1px solid $dark;
+        &.primary {            
             color: $white;
+            background-color: $red;
             &::after {
-                background-color: $yellow;
+                border: 1px solid $dark;
             }
         }
         &.secondary {
-            border: 1px solid $dark;
-            color: $dark;
+            border: 1px solid $red;
+            color: $red;
             &::after {
-                background-color: $white;
+                display: none;
             }
-        }
-        &.blue {
-            border: 1px solid $blue3;
-            color: $white;
-            &::after {
-                background-color: $blue4;
+            span {
+                top: 0;
+                left: 0;
             }
-        }
-        &.normal_white{
-            border: 1px solid $white;
-            color: $white;
-            &::after {
-                background: none;
-            }
-        }
+        }       
     }
 }
 .social-block {
@@ -71,7 +59,7 @@
                 width: 35px;
                 height: 35px;
                 position: absolute;
-                top: -30px;
+                top: -15px;
                 left: -5px;
             }
             &.instagram {
@@ -93,22 +81,26 @@
             display: flex;
             align-items: center;
             padding: 0 5px;
+            background-color: $white;
             .desc {
                 font-family: $font_citation_italic;
                 color: $dark;
             }
             .author{
                 font-family: $font_citation;
-                color: $blue3;
+                color: $blue1;
             }
         }        
     }
     &.gray {
         .containt {
             .text {
-                box-shadow: 2px 3px 7px $blue3;
+                box-shadow: 2px 3px 7px $blue1;
             }
         }
+    }
+    &.normal {
+        margin-top: 40px;
     }    
 }
 .info-block {
@@ -130,50 +122,100 @@
         }
     }
     &.green{
-        background-color: $blue1; 
+        background-color: $green1; 
     }
 }
 .block-astuce {
     .astuce {
         max-width: 280px;
         margin: 0 auto;
+        a {
+            display: block;
+        }
         .astuce-image {
             width: 100%;
             height: 215px;
             margin: 0 auto;
-        }
-        .infos {
-            display: flex;            
-            align-items: center;
-            position: relative;
-            bottom: 40px;
-            left: 15px;
-            .icon {
-                width: 63px;
-                height: 63px;
-                img{
-                    width: 100%;
-                }
-            }                      
-            h3{
-                font-family: $font_title_bold;
-                font-size: 17px;
-            }
-            p{
-                font-family: $font_title;
-                font-size: 13px;
-                line-height: 17px;
+            border: 1px solid $dark;
+
+            &::before {
+                content: '';
+                display: block;               
+                height: 100%;
+                position: relative;
+                top: 6px;
+                left: 8px;
+                z-index: -1;
             }
         }
         
     }
     &.yellow {
         .astuce {
-            .infos {
-                background-color: $yellow;
-                color: $white;
+            .astuce-image {
+                &::before {
+                    background-color: $yellow;
+                }
             }
         }
         
+    }
+}
+.block-header-main {
+    .image {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 10px;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    h1 {
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+        font-family: $font_title;
+    }
+}
+.block-type-memnber {
+    background: url('../../img/backgrounds/background-01.png') center center no-repeat;
+    background-color: $blue1;
+    color: $white;
+    text-align: center;
+    padding: 20px 30px;
+    font-family: $font_general;
+    p {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-top: 30px;
+        line-height: 25px;
+    }
+    .button-container {
+        margin-top: 30px;
+    }    
+}
+.form-group {
+    .input-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .input-text {
+        width: 70%;
+        max-width: 350px;
+        background-color: $green2;
+        border: none;
+        padding: 10px 5px;
+        font-size: 15px;
+        text-align: center;
+        
+        &::placeholder {
+            color: $green1;
+            font-family: $font_general;
+        }
     }
 }

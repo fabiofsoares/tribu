@@ -7,7 +7,7 @@
                 {
                     "type": "primary",
                     "title": "Rejoins ta tribu !",
-                    "url" : "/login"
+                    "url" : "/communaute"
                 }
             ]
         },
@@ -19,9 +19,9 @@
             "title" : "Membre classiqu<br><span>ou</span><br>éclaureur ?",
             "buttons":[
                 {
-                    "type": "secondary",
+                    "type": "primary",
                     "title": "Trouve le statut qui te correspond",
-                    "url" : "/register"
+                    "url" : "/register-1"
                 }
             ]
         },
@@ -42,7 +42,7 @@
             },
             "buttons":[
                 {
-                    "type": "blue",
+                    "type": "primary",
                     "title": "Voir tous les portraits",
                     "url" : "/voir-tous"
                 }
@@ -54,7 +54,7 @@
             "text": "C’est le taux de valorisation des déchets aujourd’hui en France",
             "buttons":[
                 {
-                    "type": "normal_white",
+                    "type": "primary",
                     "title": "En savoir plus",
                     "url" : "/voir-tous"
                 }
@@ -66,8 +66,7 @@
                 {
                     "type": "yellow",
                     "image" : "img/pages/home/astuce-01.png",
-                    "title": "Astuce du jour #32",
-                    "text": "Redonnez vie à vos vieux objets"
+                    "url": "link-to-video"
                 }
             ],
             "buttons":[
@@ -78,27 +77,191 @@
                 }
             ]
             
+        },
+        "news": {
+            "title": "Dernières actus",
+            "articles": [
+                {
+                    "type":"instagram",
+                    "data": {
+                        "image" : "img/pages/home/actus-01.png",
+                        "text" : "Le Paris du tri : une bonne initiative de la ville de Paris pour une ville plus propre et plus accueillante !",
+                        "author" : "@elodie_d"
+                    }  
+                },
+                {
+                    "type":"facebook",
+                    "data": {
+                        "image" : "img/pages/home/actus-02.png",
+                        "text" : "tr!bu vous promet l’installation très vite d’une jauge pour le quartier Italie ! Un peu de patience…",
+                        "author" : "@elodie_d"
+                    }  
+                }
+            ],
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Afficher la suite",
+                    "url" : "/voir-tous"
+                }
+            ]
         }
     },
-    "apropos":{
+    "communaute":{
         "header": {
-            "title":"Bonjour | A propos Title",
-            "text": "Be read and the callbacA PROPOS called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+            "image":"img/pages/home/header-image.png",
+            "title":"Soyez acteur de votre quartier,</br> et aidez à le vider de ses déchets !",            
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Rejoins ta tribu !",
+                    "url" : "/communaute"
+                }
+            ]
         },
-        "main": {            
-            "text": "MAAAIIN APROPOS : hen the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "project": {
+            "title": "Le projet",            
+            "text": "Le recyclage doit devenir un réflexe dans l’une des plus belle ville du monde. La Poste met à l’honneur 10 quartiers iconiques de Paris pour permettre aux Parisiens d’être acteurs de la vie dans leur quartier et d’aider à le vider de ses déchets.",
+            "image": "img/pages/communaute/project-01.png"
         },
-        "footer": {            
-            "text": "FOOTER APROPOS : nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "join": {
+            "title": "Rejoignez le mouvement !",
+            "text": "Contribuez ensemble au recyclage en remplissant les conteneurs placés à proximité de chez vous. Membre de la tribu ou éclaireurs rejoignez le mouvement !",
+            "members":[           
+                {   
+                    "title": "Devenez éclaireur",
+                    "text": "Soyez actif pour votre tribu et partagez autour de vous le concept de Tribu pour éliminer les déchets electroniques.",
+                    "image": "img/icons/eclaireur.png"
+                },
+                {                    
+                    "title": "Devenez membre",
+                    "text": "Faites grimper la jauge de votre quartier en recyclants vos déchets electroniques et participez aux évènements.",
+                    "image": "img/icons/membre.png"
+                }
+            ]
+        },
+        "member": {            
+            "description": "Fais toi aussi partie des champions de ton quartier en agissant pour l’environnement !",
+            "title" : "Membre classiqu<br><span>ou</span><br>éclaureur ?",
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Trouve le statut qui te correspond",
+                    "url" : "/register-1"
+                }
+            ]
+        },
+        "numbers": [
+            {
+                "image":"img/pages/communaute/87.png",
+                "text":"87 % des Français trient leurs déchets, Ce chiffe est alarmant et il faut réagir ! Heureusement 44 % d'entre eux le font de manière systématique"
+            },
+            {
+                "image":"img/pages/communaute/10.png",
+                "text":"Plus de 100 000 emplois liées aux activités de gestion de déchets ont été créés en 2015 (donnée Ademe, décembre 2017)"
+            },
+            {
+                "image":"img/pages/communaute/20.png",
+                "text":"L’objectif européen est  de recycler 50 % des déchets ménagers d'ici 2020"
+            }
+        ],
+        "celebrate": {
+            "title": "Célébrez votre quartier !",
+            "text": "La jauge remplie en premier fera gagner à toute la tribu une expérience unique à vivre ensemble près de chez vous !",
+            "events":[
+                {
+                    "title":"Une dégustation de vin",
+                    "image":"img/pages/communaute/event-01.png"
+                },
+                {
+                    "title":"Un cours de skate",
+                    "image":"img/pages/communaute/event-02.png"
+                },
+                {
+                    "title":"Une initiation au Street Art",
+                    "image":"img/pages/communaute/event-03.png"
+                }
+            ]
+        }        
+    },
+    "login":{
+        "header": {
+            "image":"img/logo-02.png",
+            "title":"Connectez-vous a votre Tribu !",
+            "subtitle":"Vous ne faites pas encore parti de la communauté Tribu ?",  
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Inscrivez-vous !",
+                    "url" : "/register-1"
+                }
+            ]
         }
     },
     "inscription":{
-        "header": {
-            "title":"Bonjour | INSCRIPTION",
-            "text": "Be read and the callbacA PROPOS called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "step1":{
+            "header": {
+                "image":"img/logo-02.png",
+                "title":"Connectez-vous a votre Tribu !",
+                "step":"Étape <span>1</span>"                  
+            },
+            "main":{
+                
+            }
         },
-        "footer": {            
-            "text": "FOOTER APROPOS : nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "step2":{
+            "header": {
+                "image":"img/logo-02.png",
+                "title":"Inscrivez-vous et devenez un acteur essentiel de votre quartier !",
+                "step":"Étape <span>2</span>"  
+            },
+            "main":{
+                "title": "Bienvenue",
+                "text": "Vous êtes sur le point de rejoindre votre tribu. Avant de commencer, veuillez indiquer le choix de votre statut et valider votre adressse afin de finaliser votre inscription.",
+                "members":[
+                    {
+                        "type":"eclaireur",
+                        "image": "img/icons/eclaireur.png",
+                        "title": "Devenez éclaireur de votre tribu"
+                    },
+                    {
+                        "type":"membre",
+                        "image": "img/icons/membre.png",
+                        "title": "Devenez membre de votre tribu"
+                    }
+                ]
+            },
+            "about": {
+                "title":"Être éclaireur, c’est quoi ?",
+                "text":"En tant qu’éclaireur, vous êtes en charge de rassembler vos voisins pour créer une tribu, afin de nettoyer votre quartier de tous ses déchets électroniques. ",
+                "steps":[
+                    {
+                        "title":"img/pages/inscription/1.png",
+                        "image":"Parrainez vos voisins pour qu’ils rejoignent l’aventure"
+                    },
+                    {
+                        "title":"img/pages/inscription/2.png",
+                        "image":"Organisez des évènements pour animer le quartier et rassembler vos voisins."
+                    },
+                    {
+                        "title":"img/pages/inscription/3.png",
+                        "image":"Partagez un moment de vie avec votre tribu."
+                    }
+                ],
+                "buttons":[
+                    {
+                        "type": "primary",
+                        "title": "suite",
+                        "url" : "/register-3"
+                    },
+                    {
+                        "type": "secondary",
+                        "title": "Annuler",
+                        "url" : "/unregister"
+                    }
+                ]
+            }
         }
     }
+
 }

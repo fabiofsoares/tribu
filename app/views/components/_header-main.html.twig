@@ -1,0 +1,12 @@
+<div class="block-header-main">
+    <div class="image">
+         <img alt="image" src="{{ data.image }}" />
+    </div>
+    <h1>{{ data.title }}</h1>       
+    
+    <div class='button-join'>
+        {% for button in data.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}
+     </div> 
+</div>

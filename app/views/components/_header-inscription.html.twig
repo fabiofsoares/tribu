@@ -1,0 +1,12 @@
+<div class="block-header-inscription">
+    <div class="image">
+        <img alt="image" src="{{ data.image }}" />
+    </div>
+    <h1>{{ data.title }}</h1>
+    {% if data.step %}
+        <div class="step-line">
+            <p>{{ data.step }}</p>
+            <hr>
+        </div>
+    {% endif %}
+</div>

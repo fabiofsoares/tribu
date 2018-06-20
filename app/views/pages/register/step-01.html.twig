@@ -1,0 +1,46 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="inscription-page">
+  <section class='wrap-header'> 
+    {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
+  </section>
+  <section class="wrap-form">
+      <form action='/inscription' method='post'>
+      
+        <div class="form-group">
+          <div class="input-container">
+            <input id="name" name="name" type="text" placeholder="Nom" class="input-text ui" required="true">    
+          </div>
+
+          <div class="input-container">
+            <input id="firstname" name="firstname" type="text" placeholder="Prenom" class="input-text ui" required="true">
+          </div>
+
+          <div class="input-container">
+            <input id="email" name="email" type="text" placeholder="Email" class="input-text ui" required="true">
+          </div>
+
+          <div class="input-container">
+            <input id="password" name="password" type="text" placeholder="Mot de passe" class="input-text ui" required="true">
+          </div>
+
+        </div>
+
+        <div class="button-containt">
+            <button id="submit" name="submit" class="button ui primary">Envoyer</button>
+        </div>
+      </form>
+  </section>
+  
+</div>
+{% endblock %}

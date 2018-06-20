@@ -24,26 +24,63 @@ exports.accueil = function(req, res) {
     })
 };
 
-//Page apropos
-exports.apropos = function(req, res) {
+//Page de la communaute
+exports.communaute = function(req, res) {
     req.session.email ? session = true : session = false;
-    res.render('pages/apropos.html.twig', {
+    res.render('pages/communaute.html.twig', {
         session : session,
-        data : data.apropos
+        data : data.communaute
     });
 };
 
-//Page apropos
-exports.register = function(req, res) {
-    res.render('pages/register.html.twig', {
-        data : data.inscription
-    });
+//Page d'inscription - step 0
+/*exports.register = function(req, res) {
+    if(req.session.email){
+        res.redirect('/');
+    }
+    else {
+        res.render('pages/register/step-01.html.twig', {
+            data : data.inscription.step1
+        });
+    }
+    
+};*/
+exports.register  = function(req, res) {
+      
+    switch(req.params.step){
+        case '1':
+            if(req.session.email){
+                res.redirect('/');
+            }
+            else {
+                res.render('pages/register/step-01.html.twig', {
+                    data : data.inscription.step1
+                });
+            }
+            break;
+        case '2':
+            res.render('pages/register/step-02.html.twig', {
+                data : data.inscription.step2
+            });
+            break;
+        case '3':
+            res.render('pages/register/step-03.html.twig', {
+                data : data.inscription.step3
+            });
+            break;
+        case '4':
+            res.render('pages/register/step-04.html.twig', {
+                data : data.inscription.step4
+            });
+            break;
+        default :
+            res.redirect('/');
+    }    
 };
-
 //Page apropos
 exports.login = function(req, res) {
     res.render('pages/login.html.twig', {
-        data : data.inscription
+        data : data.login
     });
 };
 

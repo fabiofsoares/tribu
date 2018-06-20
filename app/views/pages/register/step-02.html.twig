@@ -1,0 +1,38 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="inscription-page">
+  <section class='wrap-header'> 
+    {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
+  </section>
+  <section class="wrap-main-step-02">
+    <h3>{{ data.main.title }}</h3>
+
+    <p class="subtitle">{{ data.main.text }}</p>
+
+    <div class="set-member-form">
+        <form action='/set-type-member' method='post'>
+            {% for member in data.main.members %}
+                <div class='form-group member-type'>
+                    <label>
+                        <input type="radio" name="{{ member.type }}" class="radio ui" />
+                        <div class='image'> <img src="{{ member.image }}" alt="icon" /></div>
+                        <p>{{ member.title }}</p>
+                    </label>
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+  </section>
+  
+</div>
+{% endblock %}

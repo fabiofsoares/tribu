@@ -9,34 +9,42 @@
 {% endblock %}
 
 {% block content %}
-
-<form action='/connection' method='post'>
-
-    <!-- Email / Pseudo -->
-    <div class="form-group">
-        <label for="email">Email</label>  
-        <div class="input-container">
-            <input id="email" name="email" type="text" placeholder="">
+<div class="login-page">
+    <section class='wrap-header'>     
+        <div class="image">
+            <img alt="image" src="{{ data.header.image }}" />
         </div>
-    </div>
 
-    <!-- Password -->
-    <div class="form-group">
-        <label for="password">Password</label>  
-        <div class="input-container">
-            <input id="password" name="password" type="text" placeholder="">
+        <div class="title-line">
+            <h1>{{ data.header.title }}</h1>
+            <hr>
         </div>
-    </div>
+        <h2>{{ data.header.subtitle }}</h2>
 
-    <!-- Button -->
-    <div class="form-group">
-        <button id="submit" name="submit" class="btn btn-primary">Se connecter</button>
-    </div>
+        {% for button in data.header.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}         
+    </section>
+    
+    <section class='wrap-form'>
+        <form action='/connection' method='post'>
 
-</form>
+            <!-- Email / Pseudo -->
+            <div class="form-group">            
+                <div class="input-container">
+                    <input class="input-text ui" id="email" name="email" type="text" placeholder="Email">
+                </div>
+                <div class="input-container">
+                    <input class="input-text ui" id="password" name="password" type="password" placeholder="Mot de passe">
+                </div>
+            </div>
 
-<div class="form-group">
-    <a href='/register'class="btn btn-primary">S'inscrire</a>
-</div>
-  
+            <!-- Button -->
+            <div class="button-containt">
+                <button id="submit" name="submit" class="button ui primary">Connexion</button>
+            </div>
+
+        </form>
+    </section>
+</div>  
 {% endblock %}

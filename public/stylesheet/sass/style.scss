@@ -14,9 +14,8 @@ h1{
     font-family: $font_general;
     .menu-sidebar-header{
         text-align: center;
-        padding: 20px 0;
+        padding: 80px 0;
         margin: 0 auto;
-        background-color: $white;
         img {
             width: 150px;
         }
@@ -63,7 +62,7 @@ h1{
     padding: 4% 0;
     text-align: center;
     a {
-        color: $white;
+        color: $dark;
         font-size: 20px;
         text-decoration: none;
         display: inline-block;
@@ -92,11 +91,7 @@ h1{
     padding: 10px;
 }
 
-@media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 42px;
-        line-height: 56px;
-    }
+@media screen and (max-width: 1024px) {   
 
     #menu-content {
         display: none;
@@ -131,63 +126,25 @@ header {
 
 .home-page {
     .wrap-header {
-        .image {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 0 10px;
-            text-align: center;
-            img {
-                width: 100%;
-            }
-        }
         h1 {
-            margin-top: 20px;           
-            color: $blue1;
-            font-size: 22px;
-            line-height: 24px;
-            text-align: center;
-            font-family: $font_title;
-        }
+            color: $green1;
+        }        
         .button-join {
             margin-top: 30px;
         }
     }
     .wrap-type-member {
         margin-top: 60px;
-        font-family: $font_general;        
-        .containt {
-            background: url('../../img/backgrounds/background-01.png') center center no-repeat;
-            background-color: $yellow;
-            color: $white;
-            text-align: center;
-            padding: 20px 30px;
-            p {
-                font-size: 13px;
-                line-height: 15px;
-            }
-            h3 {
-                font-size: 18px;
-                margin-top: 30px;
-                line-height: 25px;
-            }
-            .button-container {
-                margin-top: 30px;
-            }    
-        }
     }
-    .wrap-portrait{
-        
-        
+    .wrap-portrait{        
         h2{
-            margin-top: 60px;
-            font-family: $font_title;
-            color: $blue3;
-            text-align: center;
-            font-size: 20px;   
+            margin-top: 60px;            
+            color: $blue1;
+            @include title_h2;   
         }
         .citation {
             background: url('../../img/backgrounds/background-02.png') center center no-repeat;
-            padding: 30px 0;
+            padding: 30px 10px;
             min-height: 120px;
             max-width: 400px;
             margin: 0 auto;
@@ -210,24 +167,325 @@ header {
     .section-astuces {
         margin-top: 40px;
         h2 {
-            text-align: center;
-            font-family: $font_title;
+            @include title_h2;  
             color: $yellow;
-            font-size: 20px;
         }
         .block-astuce {
             margin-top: 40px;
         }
+        .button-containt {
+            margin-top: 40px;
+        }
+    }
+    .section-news {
+        background-color: $blue1;
+        padding: 30px 0;
+        margin-top: 40px;
+        h2 {
+            @include title_h2;  
+            color: $white;           
+        }
+        .button-containt {
+            margin-top: 40px;
+            .button {
+                &.blue {
+                    border: 1px solid $white;
+                }
+                
+            }
+        }
+    }
+    .section-carte {
+        margin-top: 40px;
+        .carte {
+            text-align: center;
+        }
     }
 }
+.communaute-page {
+    .wrap-header {
+        h1 {
+            color: $green1;
+        }        
+        .button-join {
+            margin-top: 30px;
+        }
+    }
+    .wrap-project {
+        margin-top: 40px;       
+        .info-main {
+            background-color: $blue2;
+            padding: 20px 10%;
+            h2{
+                @include title_h2;
+                color: $dark;
+            }
+            p{
+                margin-top: 20px;
+                font-family: $font_general;
+                color: $dark;
+                line-height: 19px;
+            }
+        }
+        .la-poste {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $dark;
+            font-family: $font_title;
+            font-size: 13px;
+            margin-top: 7px;   
+            p{
+                margin-left: 5px;
+                margin-top: 0;
+            }
+        }
+        .image-main{
+            padding: 30px 0;
+            .image {
+                text-align: center;                
+            }
+        }
+    }
+    .wrap-explains-member{
+        margin-top: 30px;
+        padding: 20px 10%;
+        h2 {
+            @include title_h2;  
+            color: $dark; 
+        }
+        p{
+            color: $dark; 
+            font-family: $font_general;
+            font-size: 15px; 
+            margin-top: 15px;
+        }
+        .type-members {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
 
+            .member {
+                width: 50%;
+                max-width: 250px;
+                margin: 0 10px;
+                text-align: center;
+                h3{
+                    @include title_h2;  
+                    color: $dark;
+                    font-size: 17px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .wrap-type-member {
+        margin-top: 40px;
+    }
+    .wrap-numbers {
+        margin-top: 40px;
+        padding: 0 3%;
+        .main {           
+            max-width: 400px;            
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .image {
+                width: 49%;
+                max-width: 200px;
+                margin: 30px 0;
+                text-align: center;                
+            }
+            p {
+                width: 49%;
+                font-family: $font_general;
+            }
+        }
+    }
+    .wrap-celebrate {
+        margin-top: 40px;
+
+        .info-main {
+            padding: 20px 10%;
+            text-align: center;
+            color: $white;
+            background-color: $green1;
+
+            h2 {
+                @include title_h2;
+            }
+            p{
+                font-family: $font_general;
+                font-size: 13px;
+                line-height: 15px;
+                margin-top: 20px;
+            }
+        }
+        .events {
+            text-align: center;
+            margin-top: 40px;
+            .event {
+                max-width: 150px;
+                text-align: center;
+                display: inline-block;
+                margin: 10px 2%;
+                .event-image {
+                    border: 1px solid $green1;
+                    width: 150px;
+                    height: 120px;
+                    padding: 10px 0;
+                    box-sizing: border-box;
+                }
+                p {
+                    background-color: $green1;
+                    color: $white;
+                    padding: 5px 10%;
+                    font-family: $font_general;
+                    font-size: 13px;
+                    min-height: 40px;
+                    line-height: 40px;
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+.login-page {
+    .wrap-header{
+        .image {
+            text-align: center;
+        }
+        .title-line {
+            margin-top: 20px;
+            h1 {
+                font-family: $font_title;
+                font-size: 22px;
+                text-align: center;
+                color: $green1;
+                background-color: $white;
+                display: block;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            hr {
+                border: 1px solid $green1;
+                position: relative;
+                width: 100%;
+                bottom: 37px;
+                z-index: -1;
+            }
+        }
+        h2{            
+            @include title_h2;
+            color: $yellow;
+        }
+        .button-containt {
+            margin-top: 20px;
+        }
+    }
+    .wrap-form{
+        margin-top: 20px;
+        padding: 20px 0;
+        .button-containt {
+            margin-top: 40px;
+        }
+    }
+}
+.inscription-page {
+    .wrap-header {
+        .block-header-inscription {
+            .image {
+                text-align: center;
+            }
+            h1 {
+                font-family: $font_title;
+                color: $yellow;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .step-line {
+                margin-top: 20px;
+                p {
+                    font-family: $font_title;
+                    font-size: 20px;
+                    color: $green1;
+                    background-color: #FFFFFF;
+                    display: block;
+                    max-width: 80px;
+                    text-align: center;
+                    margin: 0 auto;
+                    span {
+                        padding: 0 5px;
+                        color: $white;
+                        background-color: $green1;
+                    }
+                }
+                hr {
+                    border: 1px solid $green1;
+                    position: relative;
+                    width: 100%;
+                    bottom: 20px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .wrap-form {
+        .button-containt {
+            margin-top: 40px;
+        }
+    }
+    .wrap-main-step-02 {
+        padding: 20px 10%;
+
+        h3 {
+            @include title_h2;
+            color: $dark;
+        }
+        .subtitle {
+            font-family: $font_general;
+            font-size: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .set-member-form {
+            text-align: center;
+            .member-type {
+                display: inline-block;
+                margin: 0 2%;
+                .radio {
+                    -webkit-appearance : none;
+                }
+                .image {
+                    text-align: center;
+                }
+                p {
+                    width: 120px;
+                    text-align: center;
+                    padding: 10px 5px;
+                    font-size: 16px;
+                    font-family: $font_general;
+                    margin-top: 10px;
+                    border: 2px solid $red;
+                    color: $red;
+                }
+            }
+            
+        }
+    }
+}
 .event-container {
     margin-top: 30px;
     h2 {
-        text-align: center;
-        font-size: 20px;
-        font-family: $font_title;
-        color: $blue1; 
+        @include title_h2;  
+        color: $green1; 
     }
     .event {
         margin-top: 30px;
@@ -245,7 +503,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $blue1;
+            background-color: $green1;
             font-family: $font_general;
             text-align: center;
             font-size: 13px;
@@ -260,14 +518,74 @@ footer {
     //position: absolute;
     bottom: 0;
     width: 100%;   
-
-    .contact {
+    .la-poste {
         display: flex;
-        p {
-            width: 50%;
+        align-items: center;
+        justify-content: center;
+        color: $dark;
+        font-family: $font_title;
+        font-size: 17px;
+        padding: 20px 0;
+
+        p{
+            margin-left: 5px;
         }
     }
-    .social {
+    .wrap-contacts {
         text-align: center;
+        font-family: $font_title;
+        color: $white;
+        background-color: $green1;
+        padding: 20px 0;
+        h3{
+            font-size: 18px;           
+        }
+        .contact {
+            margin-top: 20px;
+            display: flex;
+            p {
+                width: 50%;
+                font-size: 13px;
+                line-height: 18px;
+                font-family: $font_general;
+
+                b{
+                    font-family: $font_title;
+                }
+            }
+        }
+    }
+    .social-title {
+        margin-top: 20px;
+    }
+    .social {
+        margin-top: 20px;
+        text-align: center;
+        a {
+            margin: 0 20px;
+        }
+    }
+    .wrap-mentions {
+        background-color: $blue1;
+        padding: 5px 0;
+        ul {
+            li {
+                padding: 12px 0;
+                text-align: center;
+                a {
+                    color: $dark;
+                    font-family: $font_title;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+            }
+        }
+        p{
+            padding: 10px 0;
+            color: $dark;
+            font-family: $font_general;
+            text-align: center;
+            font-size: 13px;
+        }
     }
 }

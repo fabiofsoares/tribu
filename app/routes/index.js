@@ -6,9 +6,11 @@ let express     = require('express'),
 //Routes
 router.get('/', index.accueil )
 
-router.get('/apropos', index.apropos )
+router.get('/communaute', index.communaute )
 
-router.get('/register', index.register )
+//router.get('/register', index.register )
+
+router.get('/register-:step', index.register )
 
 router.get('/login', index.login )
 

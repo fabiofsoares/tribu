@@ -10,32 +10,15 @@
 
 {% block content %}
 <div class="home-page">
-<section class='wrap-header'>
-    
-    <div class="image">
-         <img alt="image" src="{{ data.header.image }}" />
-    </div>
-    <h1>{{ data.header.title }}</h1>       
-    
-    <div class='button-join'>
-        {% for button in data.header.buttons %}
-            {% include 'components/_button-ui.html.twig' with {data : button} %}
-        {% endfor %}
-     </div> 
+
+<section class='wrap-header'> 
+   {% include 'components/_header-main.html.twig' with { data : data.header } %}
 </section>
 
 {% include 'components/_events.html.twig' with {title : data.event.title, events : events} %}
 
 <section class='wrap-type-member'>
-    <div class='containt'>
-        <p>{{ data.member.description }}</p>
-        <h3>{{ data.member.title }}</h3>
-        <div class='button-container'>
-            {% for button in data.member.buttons %}
-                {% include 'components/_button-ui.html.twig' with {data : button} %}
-            {% endfor %}
-        </div>   
-    </div>
+    {% include 'components/_type-member.html.twig' with {data : data.member} %}
 </section>
 
 <section class='wrap-portrait'>
@@ -68,6 +51,24 @@
     {% for button in data.astuces.buttons %}
             {% include 'components/_button-ui.html.twig' with {data : button} %}
     {% endfor %}
+</section>
+
+<section class="section-news">
+    <h2>{{data.news.title}}</h2>
+
+    {% for article in data.news.articles %}
+        {% include 'components/_social-block.html.twig' with {type : article.type, data : article.data, class : 'normal'} %}
+    {% endfor %}
+
+    {% for button in data.news.buttons %}
+        {% include 'components/_button-ui.html.twig' with {data : button} %}
+    {% endfor %}
+</section>
+
+<section class="section-carte">
+    <div class="carte">
+        <img alt="carte" src="img/pages/home/carte.png" />
+    </div>
 </section>
 </div>
 {% endblock %}

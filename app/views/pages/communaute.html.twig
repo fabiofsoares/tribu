@@ -1,0 +1,89 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Communaute
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="communaute-page">
+
+    <section class='wrap-header'> 
+    {% include 'components/_header-main.html.twig' with { data : data.header } %}
+    </section>
+
+    <section class="wrap-project">
+        <div class='info-main'>
+            <h2>{{ data.project.title }}</h2>
+             <div class="la-poste">
+                <p>Inspiré & développé par</p>      
+                <img src="img/la-poste_noire.png" alt="logo la poste" />
+            </div> 
+            <p>{{ data.project.text }}</p>
+        </div>
+        <div class="image-main">
+            <div class="image">
+                <img alt="git project" src={{ data.project.image }} />
+            </div>
+        </div>
+    </section>
+    <section class="wrap-explains-member">
+        <h2>{{ data.join.title }}</h2>
+        <p>{{ data.join.text }}</p>
+        <div class="type-members">
+            {% for member in data.join.members %}
+            <div class="member">
+                <div class="image">
+                    <img alt="icon" src="{{ member.image }}">
+                </div>
+                <h3>{{ member.title }}</h3>
+                <p>{{ member.text }}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </section>
+    <section class='wrap-type-member'>
+        {% include 'components/_type-member.html.twig' with {data : data.member} %}
+    </section>
+    
+    <section class="wrap-numbers">
+        <div class="main">
+        {% for number in data.numbers %}
+            {% if loop.index % 2 == 0 %}
+                <p>{{ number.text }}</p>
+                <div class="image">
+                    <img alt="number" src={{ number.image }} />
+                </div>
+            {% else %}
+                <div class="image">
+                    <img alt="number" src={{ number.image }} />
+                </div>
+                <p>{{ number.text }}</p>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </section>
+
+    <section class="wrap-celebrate">
+        <div class="info-main">
+            <h2>{{ data.celebrate.title }}</h2>
+            <p>{{ data.celebrate.text }}</p>
+        </div>
+        <div class="events">
+         {% for event in data.celebrate.events %}
+            <div class='event'>
+                <div class="event-image"> 
+                    <img src="{{ event.image }}" alt="event" />
+                </div>
+                <p> <span>{{ event.title }}</span></p>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+</div>
+   
+{% endblock %}

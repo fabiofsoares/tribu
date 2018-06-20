@@ -34,10 +34,13 @@ $font_citation_italic : 'Circular-italic', 'arial', sans-serif;
 $font_citation : 'Circular-book', 'arial', sans-serif;
 
 //Colors
-$blue1 : #26BCAD;
-$blue2 : #8FEFD9;
-$blue3 : #B3DDFF;
-$blue4: #6CAFDD;
+$green1 : #26BCAD;
+$green2 : #8FEFD9;
+
+$blue1: #6CAFDD;
+$blue2 : #B3DDFF;
+
+$red: #FF7467;
 
 $yellow : #F2D443;
 
@@ -59,4 +62,10 @@ $desktop-width: 1024px;
   @media (min-width: #{$desktop-width}) {
     @content;
   }
+}
+
+@mixin title_h2 {
+  font-family: $font_title;
+  text-align: center;
+  font-size: 20px;
 }
