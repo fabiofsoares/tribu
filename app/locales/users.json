@@ -1,14 +1,104 @@
 {
     "user":{
         "header": {
-            "title":"Bonjour | USER Title",
-            "text": "Be read and the callback function that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+            "image":"img/logo-02.png"                     
         },
-        "main": {            
-            "text": "MAAAIIN USER :hen the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "team" : {
+            "image" : "img/pages/user/tribu.png",
+            "kilo": "img/pages/user/kilo.png"
         },
-        "footer": {            
-            "text": "FOOTER USER :nction that is to be called when the file is read completely. You can optionally also include a parameter with options, but we won't be covering those in this article."
+        "events": {
+            "title_1" : "À venir dans ton quartier",
+            "title_2" : "Événements passés"
+        },
+        "buttons":[
+            {
+                "type": "primary",
+                "title": "Organisez  un évènement",
+                "url" : "/"
+            }
+        ],
+        "nextEvents": {
+            "title": "À venir dans ton quartier",
+            "events":[
+                {
+                    "status" : "open",
+                    "date" : "14 JUN",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                },
+                {
+                    "status" : "open",
+                    "date" : "17 JUN",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                },
+                {
+                    "status" : "open",
+                    "date" : "21 JUN",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        "previousEvents": {
+            "title": "À venir dans ton quartier",
+            "events":[
+                {
+                    "status" : "close",
+                    "date" : "14 MAI",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                },
+                {
+                    "status" : "close",
+                    "date" : "17 MAI",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                },
+                {
+                    "status" : "close",
+                    "date" : "21 MAI",
+                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "buttons":[
+                        {
+                            "type": "primary",
+                            "title": "En savoir plus",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

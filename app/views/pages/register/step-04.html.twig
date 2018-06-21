@@ -1,0 +1,57 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="inscription-page">
+  
+  <section class='wrap-header'> 
+    {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
+  </section>
+  
+  <section class="wrap-main-step-03">
+    <h3>{{ data.main.title }}</h3>
+    <p class="subtitle">{{ data.main.text }}</p>
+  </section>
+  
+  <section class="wrap-form-04">
+    <h3>Votre adresse</h3>
+    <form id="form-step-04" action='/inscription-4' method='post'>
+        <div class="form-group">
+            <div class="input-container">
+                <input id="adress" name="adress" type="text" placeholder="11, Boulevard Richard Lenoir" class="input-text ui" required="true">    
+            </div>        
+        </div>
+        <div class="form-group">
+            <div class="input-container">
+                <input id="city" name="city" type="text" placeholder="Paris" class="input-text ui" value="Paris" required="true">    
+                <select class="form-control" id="district" name="team">
+                    {% for i in 1..20 %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor  %}
+                </select>
+            </div>
+        </div>
+    <form>    
+  </section>
+  <section class="wrap-tribu">
+    <h2>Vous faites partie de la tribu <span id="tribu_name">Paris 1</span>.<br/>Bienvenue !</h2>
+    <div class="image">
+        <img alt="icon" src="img/pages/inscription/tribu.png" />
+    </div>
+    <div class='buttons-container' id="btns-step-4">
+        {% for button in data.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}
+    </div>
+  </section>
+  
+</div>
+{% endblock %}

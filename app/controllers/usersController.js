@@ -33,10 +33,11 @@ exports.index = function(req, res) {
             user = {
                 name : req.session.name,
                 firstname : req.session.firstname,
-                email : req.session.email
+                email : req.session.email,
+                image : '01.jpg'
             },
             events = {},
-            sql_events = 'SELECT events.id, events.title, events.status FROM events INNER JOIN users ON events.fk_teams = users.fk_team WHERE users.email = ?',        
+            sql_events = 'SELECT events.id, events.title, events.date, events.status FROM events INNER JOIN users ON events.fk_teams = users.fk_team WHERE users.email = ?',        
             values_events = [req.session.email];             
              
         //db.connect();
@@ -45,18 +46,15 @@ exports.index = function(req, res) {
             events = rows;         
         })
         db.query(sql_teams, values_teams, function(err, rows, fields){
-            if(err) throw err;                      
+            if(err) throw err;                                
             res.render('pages/user.html.twig', {
                 session : true,
                 data : data.user,
-                user : user,
-                team : rows[0].district,
-                participants : rows,
-                events: events
+                user : user   
             });          
         })
     }else{
-        res.redirect('/')
+        res.redirect('/login')
     }    
 };
 
@@ -74,7 +72,7 @@ exports.event = function(req, res) {
             });          
         })
     }else{
-        res.redirect('/')
+        res.redirect('/login')
     }    
 };
 
@@ -91,7 +89,7 @@ exports.myAccount = function(req, res) {
             });          
         })
     }else{
-        res.redirect('/')
+        res.redirect('/login')
     }    
 };
 

@@ -29,3 +29,30 @@ overlay.addEventListener('click', function(e) {
 document.getElementById('user-btn').addEventListener('click', function(){
 	document.querySelector('.user-content').classList.toggle('active')
 })
+
+let btn_step_2 = document.querySelector('#btn-step-2'),	
+	btn_step_4 = document.querySelector('#btn-step-4');
+
+if(btn_step_2){
+	btn_step_2.addEventListener('click', function(e){
+		e.preventDefault();
+		document.getElementById('form-step-02').submit();
+	}) 
+}
+
+if(btn_step_4){
+	btn_step_4.addEventListener('click', function(e){
+		e.preventDefault();
+		document.getElementById('form-step-04').submit();
+	}) 
+}
+
+let select_district = document.getElementById('district'),
+	tribu_name = document.getElementById('tribu_name');
+
+if(select_district){
+	select_district.addEventListener('change', function(){
+		tribu_name.innerHTML = 'Paris ' + this.value;
+	})
+}
+	

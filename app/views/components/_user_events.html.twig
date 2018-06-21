@@ -1,0 +1,13 @@
+<div class='events-c'/>
+<div class="{{ 'block-user-events ' ~ data.status }}">
+    <div class="containt">
+        <div class="date">{{ data.date }}</div>
+        <p>{{ data.text }}</p>
+        <div class="button-event">
+            {% for button in data.buttons %}
+                {% include 'components/_button-ui.html.twig' with {data : button} %}
+            {% endfor %}    
+        </div>
+    </div>
+</div>
+</div>

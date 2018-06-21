@@ -1,0 +1,49 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="inscription-page">
+  
+  <section class='wrap-header'> 
+    {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
+  </section>
+  
+  <section class="wrap-main-step-03">
+    <h3>{{ data.main.title }}</h3>
+    <p class="subtitle">{{ data.main.text }}</p>
+  </section>
+  
+  <section class="wrap-form-03">
+    <h3>{{ data.form.title }}</h3>
+    <form action='/inscription-3' method='post' id="form-step-03">
+    {% for quest in data.form.questions %}
+        <div class='form-group form-step-3'>
+            <p class="question">{{ loop.index ~ '. ' ~ quest.question}}</p>
+            {% set name = quest.name %}
+            {% for opt in quest.options %}
+                <label>
+                    <input type="radio"  name="{{ name }}" value="{{ opt.option }}" class="radio ui" {{ loop.index == 1 ? 'checked' : '' }}/>
+                    <div class='icon'></div>
+                    <p>{{ opt.option }}</p>
+                </label>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    </form>
+    <div class='buttons-container' id="btns-step-3">
+        {% for button in data.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}
+    </div>
+  </section>
+  
+</div>
+{% endblock %}

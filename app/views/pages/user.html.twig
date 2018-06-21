@@ -9,18 +9,30 @@
 {% endblock %}
 
 {% block content %}
-<h1>GROUPE : {{ team }}</h1>
-<hr>
-{% for participant in participants %}
-<p>TEAM USER : {{ participant.firstname }} {{ participant.name }}</p>
-{% endfor %}
-<hr>
-{% for event in events %}
-<p>EVENT : {{ event.title }} | {{ event.status }} </br>
-{% if event.status == 'open' %}        
-    <a href={{'/users/event/'~ event.id }} >voir plus..</a>
-{% endif %} 
+<div class="user-page">
+<section class="header-page">
+     {% include 'components/_header-user.html.twig' with {data : data.header, user : user} %}
+</section>
+<section class="wrap-content">
+    <h2>{{ data.nextEvents.title }}</h2>
+    
+    <div id="next-events">
+        {% for event in data.nextEvents.events %}
+            {% include 'components/_user_events.html.twig' with {data : event} %}
+        {% endfor %}
+    </div>
+    {% for button in data.buttons %}
+        {% include 'components/_button-ui.html.twig' with {data : button} %}
+    {% endfor %}  
 
-</p></br></br>
-{% endfor %}   
+    <h2>{{ data.previousEvents.title }}</h2>
+    <div id="previous-events">
+        {% for event in data.previousEvents.events %}
+            {% include 'components/_user_events.html.twig' with {data : event} %}
+        {% endfor %}
+    </div>
+</div>
+
+</div>
+
 {% endblock %}

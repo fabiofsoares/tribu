@@ -10,9 +10,15 @@
 
 {% block content %}
 
-<p>EVENT : {{ event.title }}</p>
-<p>DESCRIPTION : {{ event.description }}</p>
-<p>DATE : {{ event.date }}</p>
-<p>STATUS : {{ event.status }}</p>
-   
+<div class="user-page events">
+<section class="header-page">
+     {% include 'components/_header-user.html.twig' with {data : data.header, user : user} %}
+</section>
+<section class="wrap-all-events">
+    <h2>{{ data.events.title }}</h2>
+    {% for event in data.events.events %}
+        {% include 'components/_user_events.html.twig' with {data : event} %}
+    {% endfor %}
+</section>
+<div>   
 {% endblock %}

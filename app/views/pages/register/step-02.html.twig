@@ -15,16 +15,16 @@
     {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
   </section>
   <section class="wrap-main-step-02">
-    <h3>{{ data.main.title }}</h3>
+    <h3>{{ data.main.title ~ ' ' ~ user_name }}</h3>
 
     <p class="subtitle">{{ data.main.text }}</p>
 
     <div class="set-member-form">
-        <form action='/set-type-member' method='post'>
+        <form id="form-step-02" action='/inscription-2' method='post'>
             {% for member in data.main.members %}
                 <div class='form-group member-type'>
                     <label>
-                        <input type="radio" name="{{ member.type }}" class="radio ui" />
+                        <input type="radio"  name="type_member" value="{{ member.type }}" class="radio ui" {{ loop.index == 2 ? 'checked' : '' }}/>
                         <div class='image'> <img src="{{ member.image }}" alt="icon" /></div>
                         <p>{{ member.title }}</p>
                     </label>
@@ -44,6 +44,11 @@
                </div>
                <p>{{ step.title }}</p>    
             </div>
+        {% endfor %}
+    </div>
+    <div class='buttons-container' id="btns-step-2">
+        {% for button in data.about.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
         {% endfor %}
     </div>
   </section>

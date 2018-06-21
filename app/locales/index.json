@@ -7,7 +7,7 @@
                 {
                     "type": "primary",
                     "title": "Rejoins ta tribu !",
-                    "url" : "/communaute"
+                    "url" : "/users"
                 }
             ]
         },
@@ -56,7 +56,7 @@
                 {
                     "type": "primary",
                     "title": "En savoir plus",
-                    "url" : "/voir-tous"
+                    "url" : "/"
                 }
             ]
         },
@@ -73,7 +73,7 @@
                 {
                     "type": "primary",
                     "title": "Plus d'astuce",
-                    "url" : "/voir-tous"
+                    "url" : "/"
                 }
             ]
             
@@ -102,7 +102,7 @@
                 {
                     "type": "primary",
                     "title": "Afficher la suite",
-                    "url" : "/voir-tous"
+                    "url" : "/"
                 }
             ]
         }
@@ -115,14 +115,14 @@
                 {
                     "type": "primary",
                     "title": "Rejoins ta tribu !",
-                    "url" : "/communaute"
+                    "url" : "/users"
                 }
             ]
         },
         "project": {
             "title": "Le projet",            
             "text": "Le recyclage doit devenir un réflexe dans l’une des plus belle ville du monde. La Poste met à l’honneur 10 quartiers iconiques de Paris pour permettre aux Parisiens d’être acteurs de la vie dans leur quartier et d’aider à le vider de ses déchets.",
-            "image": "img/pages/communaute/project-01.png"
+            "image": "img/pages/communaute/project-01.gif"
         },
         "join": {
             "title": "Rejoignez le mouvement !",
@@ -250,18 +250,127 @@
                 ],
                 "buttons":[
                     {
+                        "id": "btn-step-2",
                         "type": "primary",
-                        "title": "suite",
+                        "title": "Suite",
                         "url" : "/register-3"
-                    },
-                    {
-                        "type": "secondary",
-                        "title": "Annuler",
-                        "url" : "/unregister"
                     }
                 ]
             }
+        },
+        "step3": {
+            "header": {
+                "image":"img/logo-02.png",
+                "title":"Inscrivez-vous et devenez un acteur essentiel de votre quartier !",
+                "step":"Étape <span>3</span>"  
+            },
+            "main":{
+                "title": "Merci de vouloir vous investir dans votre quartier, pour une ville plus propre !",
+                "text": "Dites-nous-en plus sur vous."
+            },
+            "form" : {
+                "title": "Vos motivations",
+                "questions":[
+                    {
+                        "question":"Vous êtes plutôt…",
+                        "name": "vous etes",
+                        "options":[
+                            {
+                                "option": "écolo engagé : vous triez comme vous respirez"
+                            },
+                            {
+                                "option": "écolo à mi-temps : vous triez quand vous avez le temps"
+                            },
+                            {
+                                "option": "écolo du dimanche : trooop la flemme "
+                            }
+                        ]
+                    },
+                    {
+                        "question":"Aimez-vous organiser des évènements afin de rassembler les gens ?",
+                        "name": "aimez vous",
+                        "options":[
+                            {
+                                "option": "oui"
+                            },
+                            {
+                                "option": "non"
+                            }
+                        ]
+                    },
+                    {
+                        "question":"Seriez-vous prêt.e à contacter vos voisins pour les inviter à rejoindre votre tribu ?",
+                        "name": "Seriez vous",
+                        "options":[
+                            {
+                                "option": "oui"
+                            },
+                            {
+                                "option": "non"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "buttons":[
+                {
+                    "id": "btn-step-3",
+                    "type": "primary",
+                    "title": "Suite",
+                    "url" : "/register-4"
+                },
+                {
+                    "type": "secondary",
+                    "title": "Revenir à la page précédente",
+                    "url" : "/register-2"
+                }
+            ]
+        },
+        "step4": {
+            "header": {
+                "image":"img/logo-02.png",
+                "title":"Inscrivez-vous et devenez un acteur essentiel de votre quartier !",
+                "step":"Étape <span>4</span>"  
+            },
+            "main":{
+                "title": "Plus qu’une étape avant de devenir éclaireur de votre tribu !",
+                "text": "Merci de saisir votre adresse postale pour finaliser votre inscription."
+            },
+            "buttons":[
+                {
+                    "id": "btn-step-4",
+                    "type": "primary",
+                    "title": "Rejoindre votre tribu",
+                    "url" : "/register-5"
+                },
+                {
+                    "type": "secondary",
+                    "title": "Revenir à la page précédente",
+                    "url" : "/register-3"
+                }
+            ]
+        },
+        "step5":{
+            "header": {
+                "image":"img/logo-02.png",
+                "title":"Merci"
+            },
+            "main":{               
+                "text": "Votre inscription a bien été prise en compte. Un courrier avec un code et votre carte de parrainage vous seront envoyés par voie postale afin de valider votre inscription. "
+            },
+            "buttons":[
+                {
+                    "type": "primary",
+                    "title": "Rejoindre votre tribu",
+                    "url" : "/users"
+                },
+                {
+                    "type": "secondary",
+                    "title": "Retour à la page d’accueil",
+                    "url" : "/"
+                }
+            ]
+            
         }
     }
-
 }

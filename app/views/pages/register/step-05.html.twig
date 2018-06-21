@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="inscription-page">
+  
+  <section class='wrap-header'> 
+    {% include 'components/_header-inscription.html.twig' with { data : data.header } %}
+  </section>
+  
+  <section class="wrap-main-step-05">
+    <h2>{{'Merci ' ~ user_name}}</h2>    
+    <p class="subtitle">{{ data.main.text }}</p>
+    <div class='buttons-container'>
+        {% for button in data.buttons %}
+            {% include 'components/_button-ui.html.twig' with {data : button} %}
+        {% endfor %}
+    </div>
+  </section>
+  
+  
+{% endblock %}

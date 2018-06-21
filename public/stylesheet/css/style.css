@@ -183,12 +183,8 @@ table {
   background-color: #F2D443; }
 
 .block-header-main .image {
-  max-width: 500px;
-  margin: 0 auto;
   padding: 0 10px;
   text-align: center; }
-  .block-header-main .image img {
-    width: 100%; }
 
 .block-header-main h1 {
   margin-top: 20px;
@@ -229,6 +225,43 @@ table {
   .form-group .input-text::placeholder {
     color: #26BCAD;
     font-family: "Nexa", "arial", sans-serif; }
+
+.form-group select {
+  background-color: #8FEFD9;
+  border: 1px solid #8FEFD9;
+  padding: 8px 5px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 0;
+  display: inline-block;
+  height: 40px; }
+
+.block-user-events {
+  max-width: 300px;
+  height: 190px;
+  padding: 10px 5%;
+  margin: 0 2%; }
+  .block-user-events .containt .date {
+    width: 60px;
+    height: 60px;
+    color: #2b2b2b;
+    background-color: #F2D443;
+    font-family: "Circular", "arial", sans-serif;
+    font-size: 25px;
+    text-align: center; }
+  .block-user-events .containt p {
+    margin-top: 35px;
+    font-family: "Nexa", "arial", sans-serif;
+    font-size: 15px; }
+  .block-user-events .containt .button-containt {
+    text-align: right;
+    margin-top: 20px !important; }
+  .block-user-events.open {
+    background: url("../../img/backgrounds/background-03.png") center center no-repeat;
+    background-size: cover; }
+  .block-user-events.close {
+    background: url("../../img/backgrounds/background-04.png") center center no-repeat;
+    background-size: cover; }
 
 h1 {
   font-family: "Circular", "arial", sans-serif;
@@ -336,7 +369,6 @@ header {
   font-size: 20px; }
 
 .home-page .wrap-portrait .citation {
-  background: url("../../img/backgrounds/background-02.png") center center no-repeat;
   padding: 30px 10px;
   min-height: 120px;
   max-width: 400px;
@@ -417,10 +449,12 @@ header {
     .communaute-page .wrap-project .la-poste p {
       margin-left: 5px;
       margin-top: 0; }
-  .communaute-page .wrap-project .image-main {
-    padding: 30px 0; }
-    .communaute-page .wrap-project .image-main .image {
-      text-align: center; }
+  .communaute-page .wrap-project .image-main .image {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto; }
+    .communaute-page .wrap-project .image-main .image img {
+      width: 100%; }
 
 .communaute-page .wrap-explains-member {
   margin-top: 30px;
@@ -607,6 +641,9 @@ header {
       margin: 0 2%; }
       .inscription-page .wrap-main-step-02 .set-member-form .member-type .radio {
         -webkit-appearance: none; }
+        .inscription-page .wrap-main-step-02 .set-member-form .member-type .radio:checked ~ p {
+          background-color: #FF7467;
+          color: #FFFFFF; }
       .inscription-page .wrap-main-step-02 .set-member-form .member-type .image {
         text-align: center; }
       .inscription-page .wrap-main-step-02 .set-member-form .member-type p {
@@ -641,6 +678,122 @@ header {
       margin: 0 auto; }
       .inscription-page .wrap-about .steps .step .image {
         margin-top: 20px; }
+  .inscription-page .wrap-about .buttons-container {
+    margin-top: 40px; }
+    .inscription-page .wrap-about .buttons-container .button-containt {
+      margin-top: 20px; }
+      .inscription-page .wrap-about .buttons-container .button-containt .button.secondary {
+        padding: 10px 23px; }
+
+.inscription-page .wrap-main-step-03 {
+  margin-top: 20px; }
+  .inscription-page .wrap-main-step-03 h3 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #2b2b2b;
+    font-size: 18px; }
+  .inscription-page .wrap-main-step-03 .subtitle {
+    font-family: "Nexa", "arial", sans-serif;
+    color: #2b2b2b;
+    font-size: 18px;
+    text-align: center; }
+
+.inscription-page .wrap-form-03 {
+  padding: 0 3%;
+  margin-top: 40px; }
+  .inscription-page .wrap-form-03 h3 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #26BCAD; }
+  .inscription-page .wrap-form-03 .form-step-3 {
+    margin-top: 30px; }
+    .inscription-page .wrap-form-03 .form-step-3 .question {
+      font-family: "Circular", "arial", sans-serif;
+      color: #2b2b2b;
+      text-align: left;
+      font-size: 17px; }
+    .inscription-page .wrap-form-03 .form-step-3 label {
+      display: flex;
+      align-items: center;
+      margin-top: 15px; }
+    .inscription-page .wrap-form-03 .form-step-3 .radio {
+      -webkit-appearance: none; }
+      .inscription-page .wrap-form-03 .form-step-3 .radio:checked ~ .icon {
+        background: url("../../img/icons/checked.png") no-repeat center center; }
+    .inscription-page .wrap-form-03 .form-step-3 .icon {
+      border: 2px solid #26BCAD;
+      width: 20px;
+      height: 20px;
+      display: inline-block; }
+    .inscription-page .wrap-form-03 .form-step-3 p {
+      font-family: "Nexa", "arial", sans-serif;
+      color: #2b2b2b;
+      font-size: 14px;
+      display: inline-block;
+      margin-left: 10px; }
+  .inscription-page .wrap-form-03 .buttons-container {
+    margin-top: 40px; }
+    .inscription-page .wrap-form-03 .buttons-container .button-containt {
+      margin-top: 20px; }
+      .inscription-page .wrap-form-03 .buttons-container .button-containt .button.secondary {
+        padding: 10px 23px; }
+
+.inscription-page .wrap-form-04 {
+  margin-top: 40px; }
+  .inscription-page .wrap-form-04 h3 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #26BCAD; }
+  .inscription-page .wrap-form-04 .buttons-container {
+    margin-top: 40px; }
+    .inscription-page .wrap-form-04 .buttons-container .button-containt {
+      margin-top: 20px; }
+      .inscription-page .wrap-form-04 .buttons-container .button-containt .button.secondary {
+        padding: 10px 23px; }
+  .inscription-page .wrap-form-04 .form-group #city {
+    width: 58%;
+    max-width: 295px; }
+
+.inscription-page .wrap-tribu {
+  margin-top: 40px; }
+  .inscription-page .wrap-tribu h2 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #2b2b2b; }
+  .inscription-page .wrap-tribu .image {
+    margin-top: 40px;
+    text-align: center; }
+  .inscription-page .wrap-tribu .buttons-container {
+    margin-top: 40px; }
+    .inscription-page .wrap-tribu .buttons-container .button-containt {
+      margin-top: 20px; }
+      .inscription-page .wrap-tribu .buttons-container .button-containt .button.secondary {
+        padding: 10px 23px; }
+
+.inscription-page .wrap-main-step-05 h2 {
+  font-family: "Circular", "arial", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: #2b2b2b;
+  margin-top: 20px; }
+
+.inscription-page .wrap-main-step-05 p {
+  font-family: "Circular", "arial", sans-serif;
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 17px;
+  padding: 0 2%;
+  max-width: 600px;
+  margin: 20px auto 0; }
+
+.inscription-page .wrap-main-step-05 .buttons-container {
+  margin-top: 40px; }
+  .inscription-page .wrap-main-step-05 .buttons-container .button-containt {
+    margin-top: 20px; }
 
 .event-container {
   margin-top: 30px; }
@@ -727,3 +880,65 @@ footer {
       font-family: "Nexa", "arial", sans-serif;
       text-align: center;
       font-size: 13px; }
+
+.user-page .header-page .logo {
+  text-align: center; }
+
+.user-page .header-page .user-infos {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 2%; }
+  .user-page .header-page .user-infos .user-photo {
+    margin: 0 2%; }
+    .user-page .header-page .user-infos .user-photo .image {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 130px;
+      height: 130px; }
+      .user-page .header-page .user-infos .user-photo .image img {
+        width: 100%; }
+  .user-page .header-page .user-infos .user-text .name {
+    display: flex;
+    align-items: center; }
+    .user-page .header-page .user-infos .user-text .name span {
+      font-family: "Circular", "arial", sans-serif;
+      text-align: center;
+      font-size: 20px;
+      color: #2b2b2b;
+      font-size: 18px;
+      margin-right: 10px; }
+    .user-page .header-page .user-infos .user-text .name img {
+      width: 50px; }
+  .user-page .header-page .user-infos .user-text .kilo {
+    width: 200px; }
+    .user-page .header-page .user-infos .user-text .kilo img {
+      width: 100%; }
+
+.user-page .header-page .user-menu nav {
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 1px 5px 5px 0px #c6c6c6; }
+  .user-page .header-page .user-menu nav ul li {
+    display: inline-block;
+    margin: 0 0.3%; }
+    .user-page .header-page .user-menu nav ul li a {
+      text-decoration: none;
+      font-family: "Nexa", "arial", sans-serif;
+      color: #2b2b2b;
+      font-size: 13px; }
+
+.user-page .wrap-content {
+  margin-top: 40px; }
+  .user-page .wrap-content h2 {
+    font-family: "Circular", "arial", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #2b2b2b;
+    margin-top: 20px; }
+  .user-page .wrap-content .button-containt {
+    margin-top: 40px; }
+  .user-page .wrap-content #next-events {
+    margin-top: 40px; }
+  .user-page .wrap-content #previous-events {
+    margin-top: 40px; }
