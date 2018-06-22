@@ -18,3 +18,4 @@ $('#previous-events').slick({
     arrows: false,
     centerMode: true,
 });
+

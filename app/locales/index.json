@@ -15,8 +15,8 @@
             "title": "A gagner en ce moment"                    
         },
         "member": {            
-            "description": "Fais toi aussi partie des champions de ton quartier en agissant pour l’environnement !",
-            "title" : "Membre classiqu<br><span>ou</span><br>éclaureur ?",
+            "description": "Faîtes vous aussi partie des champions de votre quartier en agissant pour l’environnement !",
+            "title" : "Membre classique<br><span>ou</span><br>éclaireur ?",
             "buttons":[
                 {
                     "type": "primary",
@@ -36,7 +36,7 @@
                 "type":"instagram",
                 "data": {
                     "image" : "img/pages/home/portrait-01.png",
-                    "text" : "Premier apéro Zéro Déchet avec la Tribu Belleville ! Une belle réussite éco-responsable.",
+                    "text" : "Premier apéro Zéro Déchet avec la tribu Belleville ! Une belle réussite éco-responsable.",
                     "author" : "@mariep"
                 }                
             },
@@ -44,7 +44,7 @@
                 {
                     "type": "primary",
                     "title": "Voir tous les portraits",
-                    "url" : "/voir-tous"
+                    "url" : ""
                 }
             ]
         },
@@ -56,7 +56,7 @@
                 {
                     "type": "primary",
                     "title": "En savoir plus",
-                    "url" : "/"
+                    "url" : ""
                 }
             ]
         },
@@ -66,14 +66,14 @@
                 {
                     "type": "yellow",
                     "image" : "img/pages/home/astuce-01.png",
-                    "url": "link-to-video"
+                    "url": ""
                 }
             ],
             "buttons":[
                 {
                     "type": "primary",
                     "title": "Plus d'astuce",
-                    "url" : "/"
+                    "url" : ""
                 }
             ]
             
@@ -102,7 +102,7 @@
                 {
                     "type": "primary",
                     "title": "Afficher la suite",
-                    "url" : "/"
+                    "url" : ""
                 }
             ]
         }
@@ -126,23 +126,23 @@
         },
         "join": {
             "title": "Rejoignez le mouvement !",
-            "text": "Contribuez ensemble au recyclage en remplissant les conteneurs placés à proximité de chez vous. Membre de la tribu ou éclaireurs rejoignez le mouvement !",
+            "text": "Contribuez ensemble au recyclage en remplissant les conteneurs placés à proximité de chez vous. Membres de la tribu ou éclaireurs rejoignez le mouvement !",
             "members":[           
                 {   
                     "title": "Devenez éclaireur",
-                    "text": "Soyez actif pour votre tribu et partagez autour de vous le concept de Tribu pour éliminer les déchets electroniques.",
+                    "text": "Soyez actif pour votre tribu et partagez autour de vous le concept de tribu pour éliminer les déchets électroniques.",
                     "image": "img/icons/eclaireur.png"
                 },
                 {                    
                     "title": "Devenez membre",
-                    "text": "Faites grimper la jauge de votre quartier en recyclants vos déchets electroniques et participez aux évènements.",
+                    "text": "Faites grimper la jauge de votre quartier en recyclant vos déchets électroniques et participez aux évènements.",
                     "image": "img/icons/membre.png"
                 }
             ]
         },
         "member": {            
-            "description": "Fais toi aussi partie des champions de ton quartier en agissant pour l’environnement !",
-            "title" : "Membre classiqu<br><span>ou</span><br>éclaureur ?",
+            "description": "Faîte vous aussi partie des champions de ton quartier en agissant pour l’environnement !",
+            "title" : "Membre classique<br><span>ou</span><br>éclaireur ?",
             "buttons":[
                 {
                     "type": "primary",
@@ -154,7 +154,7 @@
         "numbers": [
             {
                 "image":"img/pages/communaute/87.png",
-                "text":"87 % des Français trient leurs déchets, Ce chiffe est alarmant et il faut réagir ! Heureusement 44 % d'entre eux le font de manière systématique"
+                "text":"87 % des Français trient leurs déchets. Ce chiffe est encourageant mais seulement 44 % d'entre eux le font de manière systématique"
             },
             {
                 "image":"img/pages/communaute/10.png",
@@ -187,8 +187,8 @@
     "login":{
         "header": {
             "image":"img/logo-02.png",
-            "title":"Connectez-vous a votre Tribu !",
-            "subtitle":"Vous ne faites pas encore parti de la communauté Tribu ?",  
+            "title":"Connectez-vous a votre tribu !",
+            "subtitle":"Vous ne faites pas encore partie de la communauté tribu ?",  
             "buttons":[
                 {
                     "type": "primary",
@@ -202,7 +202,7 @@
         "step1":{
             "header": {
                 "image":"img/logo-02.png",
-                "title":"Connectez-vous a votre Tribu !",
+                "title":"Connectez-vous à votre tribu !",
                 "step":"Étape <span>1</span>"                  
             },
             "main":{

@@ -7,7 +7,7 @@
             text-align: center;            
             display: inline-block;
             position: relative;
-            font-family: $font_general;
+            font-family: $font_citation;
             font-size: 15px;
 
             &::after {
@@ -176,16 +176,17 @@
 }
 .block-type-memnber {
     background: url('../../img/backgrounds/background-01.png') center center no-repeat;
-    background-color: $blue1;
-    color: $white;
+    background-color: $blue2;
+    color: $dark;
     text-align: center;
     padding: 20px 30px;
-    font-family: $font_general;
+    font-family: $font_citation;
     p {
         font-size: 13px;
         line-height: 15px;
     }
     h3 {
+        font-family: $font_title;
         font-size: 18px;
         margin-top: 30px;
         line-height: 25px;

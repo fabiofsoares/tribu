@@ -56,3 +56,8 @@ if(select_district){
 	})
 }
 	
+$(window).on('load', function(){ 
+	setTimeout(function(){
+		$('#spiner ').addClass('hidden');
+	}, 1000);
+});

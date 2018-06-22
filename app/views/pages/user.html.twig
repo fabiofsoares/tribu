@@ -11,7 +11,7 @@
 {% block content %}
 <div class="user-page">
 <section class="header-page">
-     {% include 'components/_header-user.html.twig' with {data : data.header, user : user} %}
+     {% include 'components/_header-user.html.twig' with {data : data.team, user : user} %}
 </section>
 <section class="wrap-content">
     <h2>{{ data.nextEvents.title }}</h2>

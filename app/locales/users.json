@@ -8,93 +8,93 @@
             "kilo": "img/pages/user/kilo.png"
         },
         "events": {
-            "title_1" : "À venir dans ton quartier",
+            "title_1" : "À venir dans votre quartier",
             "title_2" : "Événements passés"
         },
         "buttons":[
             {
                 "type": "primary",
-                "title": "Organisez  un évènement",
-                "url" : "/"
+                "title": "Organisez un évènement",
+                "url" : ""
             }
         ],
         "nextEvents": {
-            "title": "À venir dans ton quartier",
+            "title": "À venir dans votre quartier",
             "events":[
                 {
                     "status" : "open",
                     "date" : "14 JUN",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro Zéro Déchet",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 },
                 {
                     "status" : "open",
                     "date" : "17 JUN",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro écolo",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 },
                 {
                     "status" : "open",
                     "date" : "21 JUN",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro Zéro Déchet",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 }
             ]
         },
         "previousEvents": {
-            "title": "À venir dans ton quartier",
+            "title": "Événements passés",
             "events":[
                 {
                     "status" : "close",
                     "date" : "14 MAI",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro Zéro Déchet",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 },
                 {
                     "status" : "close",
                     "date" : "17 MAI",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro Zéro Déchet",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 },
                 {
                     "status" : "close",
                     "date" : "21 MAI",
-                    "text" : "Venez célebrer la fête nationale avec vos voisins autour d’un apéro écolo",
+                    "text" : "Venez célébrer la fête nationale avec vos voisins autour d’un apéro Zéro Déchet",
                     "buttons":[
                         {
                             "type": "primary",
                             "title": "En savoir plus",
-                            "url" : "/"
+                            "url" : ""
                         }
                     ]
                 }

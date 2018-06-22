@@ -99,10 +99,9 @@ exports.inscription_step_3 = function(req, res) {
     res.redirect('/register-4');
 };
 
-exports.inscription_step_4 = function(req, res) {
-    let sql = "UPDATE users SET adress = ?, city = ?, fk_team = ? WHERE users.email = ?",
+exports.inscription_step_4 = function(req, res) {    let sql = "UPDATE users SET adress = ?, city = ?, fk_team = ? WHERE users.email = ?",
         values = [ req.body.adress, req.body.city, parseInt(req.body.team), req.session.email ]
-    console.log('ICI')
+    
     db.query(sql, values, function(err, rows, fields){
         if(err) throw err;
         console.log('updadate : ', rows)

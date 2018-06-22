@@ -127,7 +127,9 @@ header {
 .home-page {
     .wrap-header {
         h1 {
+            font-family: $font_citation;
             color: $green1;
+            font-size: 18px;
         }        
         .button-join {
             margin-top: 30px;
@@ -732,7 +734,7 @@ footer {
                 width: 50%;
                 font-size: 13px;
                 line-height: 18px;
-                font-family: $font_general;
+                font-family: $font_citation;
 
                 b{
                     font-family: $font_title;
@@ -791,9 +793,9 @@ footer {
                     overflow: hidden;
                     width: 130px;
                     height: 130px;
-
+                    text-align: center;
                     img {
-                        width: 100%;
+                        //width: 100%;
                     }
                 }
             }
@@ -809,31 +811,38 @@ footer {
                     }
                     img {
                         width: 50px;
+                        position: relative;
+                        bottom: 17px;
                     }    
                     
                 }
                 .kilo{
-                    width: 200px;
-                    img {
-                        width: 100%
-                    }
+                    margin-top: 15px;
                 }
             }
         }
         .user-menu {
             nav {
                 text-align: center;
-                padding: 20px 0;
+                padding: 20px 0 15px;
                 box-shadow: 1px 5px 5px 0px #c6c6c6;
                 ul {
+                    display: flex;
+                    justify-content: space-around;
                     li {
-                        display: inline-block;
-                        margin: 0 0.3%;                       
+                        display: inline-block;                                              
                         a {
                             text-decoration: none;
                             font-family: $font_general;
-                            color: $dark;
+                            color: #9B9B9B;
                             font-size: 13px;
+                            padding-bottom: 5px;
+                            
+                            &.active {
+                                color: $dark;
+                                border-bottom: 1px solid $green1;
+
+                            }
                         }
                     }
                 }
@@ -858,4 +867,22 @@ footer {
         }
     }
 
+}
+#spiner {    
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear, z-index 0.33s linear;
+    &.hidden {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        //display: none;
+    }
 }
